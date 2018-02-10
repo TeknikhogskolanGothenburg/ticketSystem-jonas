@@ -14,12 +14,8 @@ items:
   fullName: TicketSystem.PaymentProvider.PaymentProvider
   type: Class
   source:
-    remote:
-      path: src/PaymentProvider/PaymentProvider.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: PaymentProvider
-    path: src/PaymentProvider/PaymentProvider.cs
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\PaymentProvider.cs
     startLine: 4
   assemblies:
   - PaymentProvider
@@ -60,12 +56,8 @@ items:
   fullName: TicketSystem.PaymentProvider.PaymentProvider.Pay(System.Decimal, System.String, System.String)
   type: Method
   source:
-    remote:
-      path: src/PaymentProvider/PaymentProvider.cs
-      branch: master
-      repo: https://github.com/skjohansen/AssignmentTicketSystem.git
     id: Pay
-    path: src/PaymentProvider/PaymentProvider.cs
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\PaymentProvider.cs
     startLine: 15
   assemblies:
   - PaymentProvider

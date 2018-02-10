@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop.Models
+  commentId: N:UnofficialShop.Models
+  id: UnofficialShop.Models
+  children:
+  - UnofficialShop.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: UnofficialShop.Models
+  nameWithType: UnofficialShop.Models
+  fullName: UnofficialShop.Models
+  type: Namespace
+  assemblies:
+  - UnofficialShop
+references:
+- uid: UnofficialShop.Models.ErrorViewModel
+  commentId: T:UnofficialShop.Models.ErrorViewModel
+  isExternal: false
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: UnofficialShop.Models.ErrorViewModel

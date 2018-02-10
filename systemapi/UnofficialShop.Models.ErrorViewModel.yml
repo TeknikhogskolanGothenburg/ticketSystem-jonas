@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop.Models.ErrorViewModel
+  commentId: T:UnofficialShop.Models.ErrorViewModel
+  id: ErrorViewModel
+  parent: UnofficialShop.Models
+  children:
+  - UnofficialShop.Models.ErrorViewModel.RequestId
+  - UnofficialShop.Models.ErrorViewModel.ShowRequestId
+  langs:
+  - csharp
+  - vb
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: UnofficialShop.Models.ErrorViewModel
+  type: Class
+  source:
+    id: ErrorViewModel
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\ErrorViewModel.cs
+    startLine: 4
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Models
+  syntax:
+    content: 'public class ErrorViewModel : object'
+    content.vb: >-
+      Public Class ErrorViewModel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UnofficialShop.Models.ErrorViewModel.RequestId
+  commentId: P:UnofficialShop.Models.ErrorViewModel.RequestId
+  id: RequestId
+  parent: UnofficialShop.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: ErrorViewModel.RequestId
+  fullName: UnofficialShop.Models.ErrorViewModel.RequestId
+  type: Property
+  source:
+    id: RequestId
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\ErrorViewModel.cs
+    startLine: 6
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Models
+  syntax:
+    content: public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RequestId As String
+  overload: UnofficialShop.Models.ErrorViewModel.RequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Models.ErrorViewModel.ShowRequestId
+  commentId: P:UnofficialShop.Models.ErrorViewModel.ShowRequestId
+  id: ShowRequestId
+  parent: UnofficialShop.Models.ErrorViewModel
+  langs:
+  - csharp
+  - vb
+  name: ShowRequestId
+  nameWithType: ErrorViewModel.ShowRequestId
+  fullName: UnofficialShop.Models.ErrorViewModel.ShowRequestId
+  type: Property
+  source:
+    id: ShowRequestId
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\ErrorViewModel.cs
+    startLine: 8
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Models
+  syntax:
+    content: public bool ShowRequestId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property ShowRequestId As Boolean
+  overload: UnofficialShop.Models.ErrorViewModel.ShowRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: UnofficialShop.Models
+  commentId: N:UnofficialShop.Models
+  isExternal: false
+  name: UnofficialShop.Models
+  nameWithType: UnofficialShop.Models
+  fullName: UnofficialShop.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnofficialShop.Models.ErrorViewModel.RequestId*
+  commentId: Overload:UnofficialShop.Models.ErrorViewModel.RequestId
+  isExternal: false
+  name: RequestId
+  nameWithType: ErrorViewModel.RequestId
+  fullName: UnofficialShop.Models.ErrorViewModel.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: UnofficialShop.Models.ErrorViewModel.ShowRequestId*
+  commentId: Overload:UnofficialShop.Models.ErrorViewModel.ShowRequestId
+  isExternal: false
+  name: ShowRequestId
+  nameWithType: ErrorViewModel.ShowRequestId
+  fullName: UnofficialShop.Models.ErrorViewModel.ShowRequestId
+- uid: System.Boolean
+  commentId: '!:System.Boolean'
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop.Controllers
+  commentId: N:UnofficialShop.Controllers
+  id: UnofficialShop.Controllers
+  children:
+  - UnofficialShop.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: UnofficialShop.Controllers
+  nameWithType: UnofficialShop.Controllers
+  fullName: UnofficialShop.Controllers
+  type: Namespace
+  assemblies:
+  - UnofficialShop
+references:
+- uid: UnofficialShop.Controllers.HomeController
+  commentId: T:UnofficialShop.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: UnofficialShop.Controllers.HomeController

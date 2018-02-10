@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop.Startup
+  commentId: T:UnofficialShop.Startup
+  id: Startup
+  parent: UnofficialShop
+  children:
+  - UnofficialShop.Startup.#ctor(IConfiguration)
+  - UnofficialShop.Startup.Configuration
+  - UnofficialShop.Startup.Configure(IApplicationBuilder,IHostingEnvironment)
+  - UnofficialShop.Startup.ConfigureServices(IServiceCollection)
+  langs:
+  - csharp
+  - vb
+  name: Startup
+  nameWithType: Startup
+  fullName: UnofficialShop.Startup
+  type: Class
+  source:
+    id: Startup
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    startLine: 11
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop
+  syntax:
+    content: 'public class Startup : object'
+    content.vb: >-
+      Public Class Startup
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UnofficialShop.Startup.#ctor(IConfiguration)
+  commentId: M:UnofficialShop.Startup.#ctor(IConfiguration)
+  id: '#ctor(IConfiguration)'
+  parent: UnofficialShop.Startup
+  langs:
+  - csharp
+  - vb
+  name: Startup(IConfiguration)
+  nameWithType: Startup.Startup(IConfiguration)
+  fullName: UnofficialShop.Startup.Startup(IConfiguration)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    startLine: 13
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop
+  syntax:
+    content: public Startup(IConfiguration configuration)
+    parameters:
+    - id: configuration
+      type: IConfiguration
+    content.vb: Public Sub New(configuration As IConfiguration)
+  overload: UnofficialShop.Startup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Startup.Configuration
+  commentId: P:UnofficialShop.Startup.Configuration
+  id: Configuration
+  parent: UnofficialShop.Startup
+  langs:
+  - csharp
+  - vb
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: UnofficialShop.Startup.Configuration
+  type: Property
+  source:
+    id: Configuration
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    startLine: 18
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop
+  syntax:
+    content: public IConfiguration Configuration { get; }
+    parameters: []
+    return:
+      type: IConfiguration
+    content.vb: Public ReadOnly Property Configuration As IConfiguration
+  overload: UnofficialShop.Startup.Configuration*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: UnofficialShop.Startup.ConfigureServices(IServiceCollection)
+  commentId: M:UnofficialShop.Startup.ConfigureServices(IServiceCollection)
+  id: ConfigureServices(IServiceCollection)
+  parent: UnofficialShop.Startup
+  langs:
+  - csharp
+  - vb
+  name: ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+  fullName: UnofficialShop.Startup.ConfigureServices(IServiceCollection)
+  type: Method
+  source:
+    id: ConfigureServices
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    startLine: 21
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop
+  syntax:
+    content: public void ConfigureServices(IServiceCollection services)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
+  overload: UnofficialShop.Startup.ConfigureServices*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Startup.Configure(IApplicationBuilder,IHostingEnvironment)
+  commentId: M:UnofficialShop.Startup.Configure(IApplicationBuilder,IHostingEnvironment)
+  id: Configure(IApplicationBuilder,IHostingEnvironment)
+  parent: UnofficialShop.Startup
+  langs:
+  - csharp
+  - vb
+  name: Configure(IApplicationBuilder, IHostingEnvironment)
+  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
+  fullName: UnofficialShop.Startup.Configure(IApplicationBuilder, IHostingEnvironment)
+  type: Method
+  source:
+    id: Configure
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    startLine: 27
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop
+  syntax:
+    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    parameters:
+    - id: app
+      type: IApplicationBuilder
+    - id: env
+      type: IHostingEnvironment
+    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
+  overload: UnofficialShop.Startup.Configure*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UnofficialShop
+  commentId: N:UnofficialShop
+  isExternal: false
+  name: UnofficialShop
+  nameWithType: UnofficialShop
+  fullName: UnofficialShop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnofficialShop.Startup.#ctor*
+  commentId: Overload:UnofficialShop.Startup.#ctor
+  isExternal: false
+  name: Startup
+  nameWithType: Startup.Startup
+  fullName: UnofficialShop.Startup.Startup
+- uid: IConfiguration
+  isExternal: true
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: IConfiguration
+- uid: UnofficialShop.Startup.Configuration*
+  commentId: Overload:UnofficialShop.Startup.Configuration
+  isExternal: false
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: UnofficialShop.Startup.Configuration
+- uid: UnofficialShop.Startup.ConfigureServices*
+  commentId: Overload:UnofficialShop.Startup.ConfigureServices
+  isExternal: false
+  name: ConfigureServices
+  nameWithType: Startup.ConfigureServices
+  fullName: UnofficialShop.Startup.ConfigureServices
+- uid: IServiceCollection
+  commentId: '!:IServiceCollection'
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: UnofficialShop.Startup.Configure*
+  commentId: Overload:UnofficialShop.Startup.Configure
+  isExternal: false
+  name: Configure
+  nameWithType: Startup.Configure
+  fullName: UnofficialShop.Startup.Configure
+- uid: IApplicationBuilder
+  commentId: '!:IApplicationBuilder'
+  isExternal: true
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: IApplicationBuilder
+- uid: IHostingEnvironment
+  commentId: '!:IHostingEnvironment'
+  isExternal: true
+  name: IHostingEnvironment
+  nameWithType: IHostingEnvironment
+  fullName: IHostingEnvironment

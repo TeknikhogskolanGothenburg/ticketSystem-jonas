@@ -4,6 +4,7 @@ items:
   commentId: N:TicketSystem.DatabaseRepository.Model
   id: TicketSystem.DatabaseRepository.Model
   children:
+  - TicketSystem.DatabaseRepository.Model.Customer
   - TicketSystem.DatabaseRepository.Model.TicketEvent
   - TicketSystem.DatabaseRepository.Model.TicketEventDate
   - TicketSystem.DatabaseRepository.Model.Venue
@@ -17,6 +18,12 @@ items:
   assemblies:
   - DatabaseRepository
 references:
+- uid: TicketSystem.DatabaseRepository.Model.Customer
+  commentId: T:TicketSystem.DatabaseRepository.Model.Customer
+  isExternal: false
+  name: Customer
+  nameWithType: Customer
+  fullName: TicketSystem.DatabaseRepository.Model.Customer
 - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
   commentId: T:TicketSystem.DatabaseRepository.Model.TicketEvent
   parent: TicketSystem.DatabaseRepository.Model

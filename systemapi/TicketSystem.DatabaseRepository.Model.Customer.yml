@@ -1,32 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.PaymentProvider.Payment
-  commentId: T:TicketSystem.PaymentProvider.Payment
-  id: Payment
-  parent: TicketSystem.PaymentProvider
+- uid: TicketSystem.DatabaseRepository.Model.Customer
+  commentId: T:TicketSystem.DatabaseRepository.Model.Customer
+  id: Customer
+  parent: TicketSystem.DatabaseRepository.Model
   children:
-  - TicketSystem.PaymentProvider.Payment.OrderReference
-  - TicketSystem.PaymentProvider.Payment.PaymentReference
-  - TicketSystem.PaymentProvider.Payment.PaymentStatus
-  - TicketSystem.PaymentProvider.Payment.TotalAmount
-  - TicketSystem.PaymentProvider.Payment.Valuta
+  - TicketSystem.DatabaseRepository.Model.Customer.Age
+  - TicketSystem.DatabaseRepository.Model.Customer.EMail
+  - TicketSystem.DatabaseRepository.Model.Customer.FirstName
+  - TicketSystem.DatabaseRepository.Model.Customer.Phone
   langs:
   - csharp
   - vb
-  name: Payment
-  nameWithType: Payment
-  fullName: TicketSystem.PaymentProvider.Payment
+  name: Customer
+  nameWithType: Customer
+  fullName: TicketSystem.DatabaseRepository.Model.Customer
   type: Class
   source:
-    id: Payment
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
-    startLine: 2
+    id: Customer
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
+    startLine: 6
   assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public class Payment
-    content.vb: Public Class Payment
+    content: public class Customer
+    content.vb: Public Class Customer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,155 +42,124 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.PaymentProvider.Payment.PaymentStatus
-  commentId: P:TicketSystem.PaymentProvider.Payment.PaymentStatus
-  id: PaymentStatus
-  parent: TicketSystem.PaymentProvider.Payment
+- uid: TicketSystem.DatabaseRepository.Model.Customer.FirstName
+  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.FirstName
+  id: FirstName
+  parent: TicketSystem.DatabaseRepository.Model.Customer
   langs:
   - csharp
   - vb
-  name: PaymentStatus
-  nameWithType: Payment.PaymentStatus
-  fullName: TicketSystem.PaymentProvider.Payment.PaymentStatus
+  name: FirstName
+  nameWithType: Customer.FirstName
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.FirstName
   type: Property
   source:
-    id: PaymentStatus
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
-    startLine: 4
-  assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
-  syntax:
-    content: public PaymentStatus PaymentStatus { get; set; }
-    parameters: []
-    return:
-      type: TicketSystem.PaymentProvider.PaymentStatus
-    content.vb: Public Property PaymentStatus As PaymentStatus
-  overload: TicketSystem.PaymentProvider.Payment.PaymentStatus*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.PaymentProvider.Payment.TotalAmount
-  commentId: P:TicketSystem.PaymentProvider.Payment.TotalAmount
-  id: TotalAmount
-  parent: TicketSystem.PaymentProvider.Payment
-  langs:
-  - csharp
-  - vb
-  name: TotalAmount
-  nameWithType: Payment.TotalAmount
-  fullName: TicketSystem.PaymentProvider.Payment.TotalAmount
-  type: Property
-  source:
-    id: TotalAmount
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
-    startLine: 5
-  assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
-  syntax:
-    content: public decimal TotalAmount { get; set; }
-    parameters: []
-    return:
-      type: System.Decimal
-    content.vb: Public Property TotalAmount As Decimal
-  overload: TicketSystem.PaymentProvider.Payment.TotalAmount*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.PaymentProvider.Payment.Valuta
-  commentId: P:TicketSystem.PaymentProvider.Payment.Valuta
-  id: Valuta
-  parent: TicketSystem.PaymentProvider.Payment
-  langs:
-  - csharp
-  - vb
-  name: Valuta
-  nameWithType: Payment.Valuta
-  fullName: TicketSystem.PaymentProvider.Payment.Valuta
-  type: Property
-  source:
-    id: Valuta
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
-    startLine: 6
-  assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
-  syntax:
-    content: public string Valuta { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property Valuta As String
-  overload: TicketSystem.PaymentProvider.Payment.Valuta*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.PaymentProvider.Payment.PaymentReference
-  commentId: P:TicketSystem.PaymentProvider.Payment.PaymentReference
-  id: PaymentReference
-  parent: TicketSystem.PaymentProvider.Payment
-  langs:
-  - csharp
-  - vb
-  name: PaymentReference
-  nameWithType: Payment.PaymentReference
-  fullName: TicketSystem.PaymentProvider.Payment.PaymentReference
-  type: Property
-  source:
-    id: PaymentReference
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
-    startLine: 7
-  assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
-  syntax:
-    content: public string PaymentReference { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property PaymentReference As String
-  overload: TicketSystem.PaymentProvider.Payment.PaymentReference*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TicketSystem.PaymentProvider.Payment.OrderReference
-  commentId: P:TicketSystem.PaymentProvider.Payment.OrderReference
-  id: OrderReference
-  parent: TicketSystem.PaymentProvider.Payment
-  langs:
-  - csharp
-  - vb
-  name: OrderReference
-  nameWithType: Payment.OrderReference
-  fullName: TicketSystem.PaymentProvider.Payment.OrderReference
-  type: Property
-  source:
-    id: OrderReference
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\PaymentProvider\Payment.cs
+    id: FirstName
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
     startLine: 8
   assemblies:
-  - PaymentProvider
-  namespace: TicketSystem.PaymentProvider
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
   syntax:
-    content: public string OrderReference { get; set; }
+    content: public string FirstName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property OrderReference As String
-  overload: TicketSystem.PaymentProvider.Payment.OrderReference*
+    content.vb: Public Property FirstName As String
+  overload: TicketSystem.DatabaseRepository.Model.Customer.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.Customer.Age
+  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.Age
+  id: Age
+  parent: TicketSystem.DatabaseRepository.Model.Customer
+  langs:
+  - csharp
+  - vb
+  name: Age
+  nameWithType: Customer.Age
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.Age
+  type: Property
+  source:
+    id: Age
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
+    startLine: 9
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public int Age { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Age As Integer
+  overload: TicketSystem.DatabaseRepository.Model.Customer.Age*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.Customer.EMail
+  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.EMail
+  id: EMail
+  parent: TicketSystem.DatabaseRepository.Model.Customer
+  langs:
+  - csharp
+  - vb
+  name: EMail
+  nameWithType: Customer.EMail
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.EMail
+  type: Property
+  source:
+    id: EMail
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
+    startLine: 10
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public string EMail { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EMail As String
+  overload: TicketSystem.DatabaseRepository.Model.Customer.EMail*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketSystem.DatabaseRepository.Model.Customer.Phone
+  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.Phone
+  id: Phone
+  parent: TicketSystem.DatabaseRepository.Model.Customer
+  langs:
+  - csharp
+  - vb
+  name: Phone
+  nameWithType: Customer.Phone
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.Phone
+  type: Property
+  source:
+    id: Phone
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
+    startLine: 11
+  assemblies:
+  - DatabaseRepository
+  namespace: TicketSystem.DatabaseRepository.Model
+  syntax:
+    content: public double Phone { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Phone As Double
+  overload: TicketSystem.DatabaseRepository.Model.Customer.Phone*
   modifiers.csharp:
   - public
   - get
@@ -199,12 +167,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.PaymentProvider
-  commentId: N:TicketSystem.PaymentProvider
+- uid: TicketSystem.DatabaseRepository.Model
+  commentId: N:TicketSystem.DatabaseRepository.Model
   isExternal: false
-  name: TicketSystem.PaymentProvider
-  nameWithType: TicketSystem.PaymentProvider
-  fullName: TicketSystem.PaymentProvider
+  name: TicketSystem.DatabaseRepository.Model
+  nameWithType: TicketSystem.DatabaseRepository.Model
+  fullName: TicketSystem.DatabaseRepository.Model
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -497,38 +465,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.PaymentProvider.Payment.PaymentStatus*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.PaymentStatus
+- uid: TicketSystem.DatabaseRepository.Model.Customer.FirstName*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.FirstName
   isExternal: false
-  name: PaymentStatus
-  nameWithType: Payment.PaymentStatus
-  fullName: TicketSystem.PaymentProvider.Payment.PaymentStatus
-- uid: TicketSystem.PaymentProvider.PaymentStatus
-  commentId: T:TicketSystem.PaymentProvider.PaymentStatus
-  parent: TicketSystem.PaymentProvider
-  isExternal: false
-  name: PaymentStatus
-  nameWithType: PaymentStatus
-  fullName: TicketSystem.PaymentProvider.PaymentStatus
-- uid: TicketSystem.PaymentProvider.Payment.TotalAmount*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.TotalAmount
-  isExternal: false
-  name: TotalAmount
-  nameWithType: Payment.TotalAmount
-  fullName: TicketSystem.PaymentProvider.Payment.TotalAmount
-- uid: System.Decimal
-  commentId: T:System.Decimal
-  parent: System
-  isExternal: true
-  name: Decimal
-  nameWithType: Decimal
-  fullName: System.Decimal
-- uid: TicketSystem.PaymentProvider.Payment.Valuta*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.Valuta
-  isExternal: false
-  name: Valuta
-  nameWithType: Payment.Valuta
-  fullName: TicketSystem.PaymentProvider.Payment.Valuta
+  name: FirstName
+  nameWithType: Customer.FirstName
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.FirstName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -536,15 +478,35 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TicketSystem.PaymentProvider.Payment.PaymentReference*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.PaymentReference
+- uid: TicketSystem.DatabaseRepository.Model.Customer.Age*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.Age
   isExternal: false
-  name: PaymentReference
-  nameWithType: Payment.PaymentReference
-  fullName: TicketSystem.PaymentProvider.Payment.PaymentReference
-- uid: TicketSystem.PaymentProvider.Payment.OrderReference*
-  commentId: Overload:TicketSystem.PaymentProvider.Payment.OrderReference
+  name: Age
+  nameWithType: Customer.Age
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.Age
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketSystem.DatabaseRepository.Model.Customer.EMail*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.EMail
   isExternal: false
-  name: OrderReference
-  nameWithType: Payment.OrderReference
-  fullName: TicketSystem.PaymentProvider.Payment.OrderReference
+  name: EMail
+  nameWithType: Customer.EMail
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.EMail
+- uid: TicketSystem.DatabaseRepository.Model.Customer.Phone*
+  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.Phone
+  isExternal: false
+  name: Phone
+  nameWithType: Customer.Phone
+  fullName: TicketSystem.DatabaseRepository.Model.Customer.Phone
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double

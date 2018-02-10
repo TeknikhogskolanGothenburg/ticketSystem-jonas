@@ -9,6 +9,8 @@
 - uid: TicketSystem.DatabaseRepository.Model
   name: TicketSystem.DatabaseRepository.Model
   items:
+  - uid: TicketSystem.DatabaseRepository.Model.Customer
+    name: Customer
   - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
     name: TicketEvent
   - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
@@ -38,3 +40,20 @@
   items:
   - uid: TicketSystem.RestApiClient.Model.Ticket
     name: Ticket
+- uid: UnofficialShop
+  name: UnofficialShop
+  items:
+  - uid: UnofficialShop.Program
+    name: Program
+  - uid: UnofficialShop.Startup
+    name: Startup
+- uid: UnofficialShop.Controllers
+  name: UnofficialShop.Controllers
+  items:
+  - uid: UnofficialShop.Controllers.HomeController
+    name: HomeController
+- uid: UnofficialShop.Models
+  name: UnofficialShop.Models
+  items:
+  - uid: UnofficialShop.Models.ErrorViewModel
+    name: ErrorViewModel

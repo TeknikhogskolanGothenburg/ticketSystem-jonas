@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Dapper;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
-using Dapper;
 using TicketSystem.DatabaseRepository.Model;
 
 namespace TicketSystem.DatabaseRepository
 {
     public class TicketDatabase : ITicketDatabase
     {
+        static string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=TicketSystem;Trusted_Connection=True";
         public TicketEvent EventAdd(string name, string description)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -23,7 +24,7 @@ namespace TicketSystem.DatabaseRepository
 
         public Venue VenueAdd(string name, string address, string city, string country)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -33,14 +34,37 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
+        public void VenueRemove(string name)
+        {
+           
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("DELETE FROM Venues  WHERE VenueName =" + "'" + name +"'"  , new { VenueName = name});
+              
+            }
+        }
+
+
         public List<Venue> VenuesFind(string query)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueName like '%"+query+ "%' OR Address like '%" + query + "%' OR City like '%" + query + "%' OR Country like '%" + query + "%'").ToList();
             }
         }
+
+
+        }
+
+
+        //Method to clear up the code.
+        //public void ConnectionString()
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+        //    using (var connection = new SqlConnection(connectionString)) ;
+        //}
     }
-}
+

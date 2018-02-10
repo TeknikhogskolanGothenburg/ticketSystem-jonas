@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop.Controllers.HomeController
+  commentId: T:UnofficialShop.Controllers.HomeController
+  id: HomeController
+  parent: UnofficialShop.Controllers
+  children:
+  - UnofficialShop.Controllers.HomeController.About
+  - UnofficialShop.Controllers.HomeController.Contact
+  - UnofficialShop.Controllers.HomeController.Error
+  - UnofficialShop.Controllers.HomeController.Index
+  langs:
+  - csharp
+  - vb
+  name: HomeController
+  nameWithType: HomeController
+  fullName: UnofficialShop.Controllers.HomeController
+  type: Class
+  source:
+    id: HomeController
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
+    startLine: 10
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Controllers
+  syntax:
+    content: 'public class HomeController : Controller'
+    content.vb: >-
+      Public Class HomeController
+          Inherits Controller
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: UnofficialShop.Controllers.HomeController.Index
+  commentId: M:UnofficialShop.Controllers.HomeController.Index
+  id: Index
+  parent: UnofficialShop.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: HomeController.Index()
+  fullName: UnofficialShop.Controllers.HomeController.Index()
+  type: Method
+  source:
+    id: Index
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
+    startLine: 12
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Controllers
+  syntax:
+    content: public IActionResult Index()
+    return:
+      type: IActionResult
+    content.vb: Public Function Index As IActionResult
+  overload: UnofficialShop.Controllers.HomeController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Controllers.HomeController.About
+  commentId: M:UnofficialShop.Controllers.HomeController.About
+  id: About
+  parent: UnofficialShop.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: About()
+  nameWithType: HomeController.About()
+  fullName: UnofficialShop.Controllers.HomeController.About()
+  type: Method
+  source:
+    id: About
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
+    startLine: 17
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Controllers
+  syntax:
+    content: public IActionResult About()
+    return:
+      type: IActionResult
+    content.vb: Public Function About As IActionResult
+  overload: UnofficialShop.Controllers.HomeController.About*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Controllers.HomeController.Contact
+  commentId: M:UnofficialShop.Controllers.HomeController.Contact
+  id: Contact
+  parent: UnofficialShop.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Contact()
+  nameWithType: HomeController.Contact()
+  fullName: UnofficialShop.Controllers.HomeController.Contact()
+  type: Method
+  source:
+    id: Contact
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
+    startLine: 24
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Controllers
+  syntax:
+    content: public IActionResult Contact()
+    return:
+      type: IActionResult
+    content.vb: Public Function Contact As IActionResult
+  overload: UnofficialShop.Controllers.HomeController.Contact*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Controllers.HomeController.Error
+  commentId: M:UnofficialShop.Controllers.HomeController.Error
+  id: Error
+  parent: UnofficialShop.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Error()
+  nameWithType: HomeController.Error()
+  fullName: UnofficialShop.Controllers.HomeController.Error()
+  type: Method
+  source:
+    id: Error
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
+    startLine: 31
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Controllers
+  syntax:
+    content: public IActionResult Error()
+    return:
+      type: IActionResult
+    content.vb: Public Function Error As IActionResult
+  overload: UnofficialShop.Controllers.HomeController.Error*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: UnofficialShop.Controllers
+  commentId: N:UnofficialShop.Controllers
+  isExternal: false
+  name: UnofficialShop.Controllers
+  nameWithType: UnofficialShop.Controllers
+  fullName: UnofficialShop.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnofficialShop.Controllers.HomeController.Index*
+  commentId: Overload:UnofficialShop.Controllers.HomeController.Index
+  isExternal: false
+  name: Index
+  nameWithType: HomeController.Index
+  fullName: UnofficialShop.Controllers.HomeController.Index
+- uid: IActionResult
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: IActionResult
+- uid: UnofficialShop.Controllers.HomeController.About*
+  commentId: Overload:UnofficialShop.Controllers.HomeController.About
+  isExternal: false
+  name: About
+  nameWithType: HomeController.About
+  fullName: UnofficialShop.Controllers.HomeController.About
+- uid: UnofficialShop.Controllers.HomeController.Contact*
+  commentId: Overload:UnofficialShop.Controllers.HomeController.Contact
+  isExternal: false
+  name: Contact
+  nameWithType: HomeController.Contact
+  fullName: UnofficialShop.Controllers.HomeController.Contact
+- uid: UnofficialShop.Controllers.HomeController.Error*
+  commentId: Overload:UnofficialShop.Controllers.HomeController.Error
+  isExternal: false
+  name: Error
+  nameWithType: HomeController.Error
+  fullName: UnofficialShop.Controllers.HomeController.Error

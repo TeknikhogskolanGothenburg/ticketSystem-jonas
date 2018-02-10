@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: UnofficialShop
+  commentId: N:UnofficialShop
+  id: UnofficialShop
+  children:
+  - UnofficialShop.Program
+  - UnofficialShop.Startup
+  langs:
+  - csharp
+  - vb
+  name: UnofficialShop
+  nameWithType: UnofficialShop
+  fullName: UnofficialShop
+  type: Namespace
+  assemblies:
+  - UnofficialShop
+references:
+- uid: UnofficialShop.Program
+  commentId: T:UnofficialShop.Program
+  isExternal: false
+  name: Program
+  nameWithType: Program
+  fullName: UnofficialShop.Program
+- uid: UnofficialShop.Startup
+  commentId: T:UnofficialShop.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: Startup
+  fullName: UnofficialShop.Startup
