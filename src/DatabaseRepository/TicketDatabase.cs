@@ -10,9 +10,12 @@ namespace TicketSystem.DatabaseRepository
     public class TicketDatabase : ITicketDatabase
     {
         static string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=TicketSystem;Trusted_Connection=True";
+        //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+
+
         public TicketEvent EventAdd(string name, string description)
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
+            
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -40,7 +43,7 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("DELETE FROM Venues  WHERE VenueName =" + "'" + name +"'"  , new { VenueName = name});
+                connection.Query("DELETE FROM Venues  WHERE VenueName =" + "'" + name +"'");
               
             }
         }
@@ -48,7 +51,6 @@ namespace TicketSystem.DatabaseRepository
 
         public List<Venue> VenuesFind(string query)
         {
-            //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -59,12 +61,5 @@ namespace TicketSystem.DatabaseRepository
 
         }
 
-
-        //Method to clear up the code.
-        //public void ConnectionString()
-        //{
-        //    string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
-        //    using (var connection = new SqlConnection(connectionString)) ;
-        //}
     }
 

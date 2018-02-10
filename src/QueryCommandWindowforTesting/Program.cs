@@ -17,16 +17,20 @@ namespace QueryCommandWindowforTesting
 
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine("enter name of venue to remove");
-            string query1 = Console.ReadLine();
-            DatabaseTester.VenueRemove(query1);
-
+            //venueadd tester
+            //Console.WriteLine("enter name of venue");
+            //string query1 = Console.ReadLine();
+            //Console.WriteLine("enter adress");
             //string query2 = Console.ReadLine();
+            //Console.WriteLine("enter city");
             //string query3 = Console.ReadLine();
+            //Console.WriteLine("enter country");
             //string query4 = Console.ReadLine();
             //DatabaseTester.VenueAdd(query1, query2, query3, query4);
 
-
+            Console.WriteLine("enter name of venue to remove");
+            string query1 = Console.ReadLine();
+            DatabaseTester.VenueRemove(query1);
         }
     }
 }
