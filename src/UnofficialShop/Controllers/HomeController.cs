@@ -4,12 +4,18 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TicketSystem.RestApiClient;
 using UnofficialShop.Models;
+using TicketSystem.RestApiClient.Model;
 
 namespace UnofficialShop.Controllers
 {
     public class HomeController : Controller
     {
+        //TicketApi ticketApi = new TicketApi();
+        //public List<Ticket> ticketlist = TicketGet();
+        //At the start of this I need to have the EVENT-list loaded into the index page.
+
         public IActionResult Index()
         {
             return View();
@@ -18,7 +24,6 @@ namespace UnofficialShop.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
