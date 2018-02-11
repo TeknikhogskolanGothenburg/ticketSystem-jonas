@@ -12,7 +12,7 @@ namespace TicketSystem.DatabaseRepository
         static string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=TicketSystem;Trusted_Connection=True";
         //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
 
-
+        //Backoffice adding event
         public TicketEvent EventAdd(string name, string description)
         {
             
@@ -24,7 +24,17 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
             }
         }
-
+         
+        //Backoffice removing event
+        public void EventRemove(string name)
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Query("DELETE FROM TicketEvents  WHERE EventName =" + "'" + name + "'");
+            }
+        }
+        //Backoffice Adding venue
         public Venue VenueAdd(string name, string address, string city, string country)
         {
             
@@ -36,7 +46,7 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
-
+        //Backoffice removing venue
         public void VenueRemove(string name)
         {
            
@@ -47,7 +57,6 @@ namespace TicketSystem.DatabaseRepository
               
             }
         }
-
 
         public List<Venue> VenuesFind(string query)
         {
