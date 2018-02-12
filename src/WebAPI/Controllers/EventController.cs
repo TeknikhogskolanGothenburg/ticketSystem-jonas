@@ -12,6 +12,8 @@ namespace WebAPI.Controllers
     [Route("api/Event")]
     public class EventController : Controller
     {
+        TicketDatabase ticketDB = new TicketDatabase();
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()

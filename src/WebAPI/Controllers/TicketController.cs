@@ -12,7 +12,7 @@ namespace WebAPI.Controllers
     [Route("api/Ticket")]
     public class TicketController : Controller
     {
-        TicketDatabase db = new TicketDatabase();
+        TicketDatabase ticketDB = new TicketDatabase();
 
 
         // GET: api/Ticket

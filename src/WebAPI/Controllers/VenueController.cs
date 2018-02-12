@@ -13,8 +13,8 @@ namespace WebAPI.Controllers
     [Route("api/Venue")]
     public class VenueController : Controller
     {
-        TicketDatabase db = new TicketDatabase();
-        
+        TicketDatabase ticketDB = new TicketDatabase();
+
 
         // GET: api/Venue
         [HttpGet]
