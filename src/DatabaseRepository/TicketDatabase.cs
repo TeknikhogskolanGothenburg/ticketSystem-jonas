@@ -26,12 +26,12 @@ namespace TicketSystem.DatabaseRepository
         }
          
         //Backoffice removing event
-        public void EventRemove(string name)
+        public void EventRemove(int ID)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("DELETE FROM TicketEvents  WHERE EventName =" + "'" + name + "'");
+                connection.Query("DELETE FROM TicketEvents  WHERE ID =" + "'" + ID + "'");
             }
         }
         //Backoffice Adding venue
