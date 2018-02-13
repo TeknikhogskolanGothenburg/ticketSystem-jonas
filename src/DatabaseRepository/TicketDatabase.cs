@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using TicketSystem.DatabaseRepository.Model;
+using TicketModel;
 
 namespace TicketSystem.DatabaseRepository
 {

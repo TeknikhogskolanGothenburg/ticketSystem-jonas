@@ -20,7 +20,7 @@ namespace TicketSystem.RestApiClient
 
         public Ticket TicketTicketIdGet(int ticketId)
         {
-            var client = new RestClient("http://localhost:18001/");
+            var client = new RestClient(connectionStringAPI);
             var request = new RestRequest("ticket/{id}", Method.GET);
             request.AddUrlSegment("id", ticketId);
             var response = client.Execute<Ticket>(request);
@@ -32,5 +32,22 @@ namespace TicketSystem.RestApiClient
 
             return response.Data;
         }
+
+        public Ticket TicketEventGet(int TicketEventId)
+        {
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Event/{id}", Method.GET);
+            request.AddUrlSegment("id", TicketEventId);
+            var response = client.Execute<Ticket>(request);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                throw new KeyNotFoundException(string.Format("Event not found", TicketEventId));
+            }
+            return response.Data;
+        }
+
+
+
     }
 }
