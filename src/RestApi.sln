@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProvider", "PaymentP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryCommandWindowforTesting", "QueryCommandWindowforTesting\QueryCommandWindowforTesting.csproj", "{0BECAA4C-8574-45F7-9EA5-7F46A038971D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{880BDABD-1748-4D72-BEFF-37A5A4C9C4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{880BDABD-1748-4D72-BEFF-37A5A4C9C4FB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketModel", "TicketModel\TicketModel.csproj", "{B527A3D3-57F1-43C5-9B97-B99661D528D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{880BDABD-1748-4D72-BEFF-37A5A4C9C4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{880BDABD-1748-4D72-BEFF-37A5A4C9C4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{880BDABD-1748-4D72-BEFF-37A5A4C9C4FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B527A3D3-57F1-43C5-9B97-B99661D528D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B527A3D3-57F1-43C5-9B97-B99661D528D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B527A3D3-57F1-43C5-9B97-B99661D528D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B527A3D3-57F1-43C5-9B97-B99661D528D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

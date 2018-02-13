@@ -18,6 +18,8 @@ namespace UnofficialShop.Controllers
 
         public IActionResult Index()
         {
+            ITicketApi ticketApi = new TicketApi();
+            ViewBag.NumberOfTickets = ticketApi.TicketGet().Count;
             return View();
         }
 

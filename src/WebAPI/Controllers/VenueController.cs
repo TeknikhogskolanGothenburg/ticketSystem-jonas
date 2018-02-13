@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/Venue/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetVenue")]
         public string Get(int id)
         {
             return "value";

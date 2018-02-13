@@ -1,5 +1,8 @@
-﻿namespace TicketSystem.DatabaseRepository.Model
+﻿
+
+namespace TicketModel
 {
+
     public class TicketEvent
     {
         public int TicketEventId { get; set; }
