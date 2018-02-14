@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TicketSystem.DatabaseRepository.Model
+namespace TicketModel
 {
     public class TicketEventDate
     {

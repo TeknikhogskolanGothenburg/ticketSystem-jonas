@@ -1,4 +1,4 @@
-﻿namespace TicketSystem.DatabaseRepository.Model
+﻿namespace TicketModel
 {
     public class Venue
     {

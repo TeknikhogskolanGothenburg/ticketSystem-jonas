@@ -6,30 +6,42 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Admin.Models;
 using TicketModel;
+using TicketSystem.RestApiClient;
 
 
 namespace Admin.Controllers
 {
+
+
     public class HomeController : Controller
     {
-        
+
+        private TicketEvent ticketEvent = new TicketEvent();
+        private Venue venue = new Venue();
+        private TicketApi ticketApi = new TicketApi();
 
         public IActionResult Index()
         {
-            
 
+            return View(); //Will return a view of all venues and events
         }
 
-        public IActionResult About()
+        public IActionResult AddVenue()
         {
-            ViewData["Message"] = "Your application description page.";
+
+            venue.VenueName = "Ullevi";
+            venue.Country = "Swe";
+            venue.City = "gbg";
+            venue.Address = "gbg";
+
+            ticketApi.VenueAdd(venue);
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Events()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Adding/removing Events";
 
             return View();
         }

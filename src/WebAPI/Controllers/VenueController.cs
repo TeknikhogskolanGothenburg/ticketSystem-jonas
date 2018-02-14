@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TicketModel;
 using TicketSystem.DatabaseRepository;
 
 namespace WebAPI.Controllers
@@ -32,8 +33,9 @@ namespace WebAPI.Controllers
         
         // POST: api/Venue
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Venue venue)
         {
+            ticketDB.VenueAdd(venue);
         }
         
         // PUT: api/Venue/5

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using TicketSystem.RestApiClient.Model;
 using TicketModel;
-
+using Newtonsoft.Json;
 
 namespace TicketSystem.RestApiClient
 {
@@ -61,6 +61,28 @@ namespace TicketSystem.RestApiClient
                 throw new KeyNotFoundException(string.Format("Venue not found", Id));
             }
             return response.Data;
+        }
+
+        public void EventsAdd(TicketEvent ticketEvent)
+        {
+            var output = JsonConvert.SerializeObject(ticketEvent);
+
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Event", Method.POST);
+            request.AddParameter("application/json", output, ParameterType.RequestBody);
+            var response = client.Execute<TicketEvent>(request);
+
+        }
+
+        public void VenueAdd(Venue venue)
+        {
+            var output = JsonConvert.SerializeObject(venue);
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Venue", Method.POST);
+            request.AddParameter("application/json", output, ParameterType.RequestBody);
+            var response = client.Execute<Venue>(request);
+
+
         }
 
 

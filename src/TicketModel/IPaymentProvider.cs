@@ -1,4 +1,4 @@
-﻿namespace TicketSystem.PaymentProvider
+﻿namespace TicketModel
 {
     public interface IPaymentProvider
     {

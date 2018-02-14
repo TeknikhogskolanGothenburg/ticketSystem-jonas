@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystem.DatabaseRepository.Model
-{
+namespace TicketModel
+{ 
     public class Customer
     {
         public string LastName { get; set; }

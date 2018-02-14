@@ -1,4 +1,4 @@
-﻿using TicketSystem.DatabaseRepository.Model;
+﻿
 using System.Collections.Generic;
 using TicketModel;
 
@@ -22,7 +22,7 @@ namespace TicketSystem.DatabaseRepository
         /// <param name="city">City part of the adress</param>
         /// <param name="country">Country part of the adress</param>
         /// <returns>An object representing the newly created Venue</returns>
-        Venue VenueAdd(string name, string address, string city, string country);
+        Venue VenueAdd(Venue venue);
 
 
  
