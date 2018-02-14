@@ -8,19 +8,22 @@ using TicketSystem.RestApiClient;
 using UnofficialShop.Models;
 using TicketSystem.RestApiClient.Model;
 
+
 namespace UnofficialShop.Controllers
 {
     public class HomeController : Controller
     {
-        //TicketApi ticketApi = new TicketApi();
+       public static TicketApi ticketApi = new TicketApi();
+
         //public List<Ticket> ticketlist = TicketGet();
         //At the start of this I need to have the EVENT-list loaded into the index page.
+        //public List<TicketEvent> EventFind()
 
         public IActionResult Index()
         {
-            ITicketApi ticketApi = new TicketApi();
-            ViewBag.NumberOfTickets = ticketApi.TicketGet().Count;
+           ticketApi.EventGet();
             return View();
+
         }
 
         public IActionResult About()

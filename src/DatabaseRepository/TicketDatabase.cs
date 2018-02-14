@@ -69,20 +69,25 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Ticketshop list of Events to be displayed at startup
-        public List<TicketEvent> EventFind(string query)
+        //Ticketshop choose an item through the list
+        public List<TicketEvent> EventSelect(int ID)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<TicketEvent>("SELECT * FROM Venues WHERE VenueName like '%" + query + "%' OR Address like '%" + query + "%' OR City like '%" + query + "%' OR Country like '%" + query + "%'").ToList();
+                return connection.Query<TicketEvent>("SELECT * FROM Venues WHERE VenueID = '" + ID + "'") .ToList();
             }
         }
 
-
-
-
-
+        //Getall list
+        public List<TicketEvent> EventGet()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<TicketEvent>("SELECT * FROM Venues ").ToList();
+            }
+        }
     }
 
     }

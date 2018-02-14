@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TicketSystem.DatabaseRepository;
+using TicketModel;
 
 namespace WebAPI.Controllers
 {
@@ -14,14 +15,15 @@ namespace WebAPI.Controllers
     {
         TicketDatabase ticketDB = new TicketDatabase();
 
-        // GET api/values
+        // GET api/Event
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<TicketEvent> Get()
         {
-            return new string[] { "value1", "value2" };
+            
+            return ticketDB.EventGet();
         }
 
-        // GET api/values/5
+        // GET api/Event/5
         [HttpGet("{id}")]
         public string Get(int id)
         {

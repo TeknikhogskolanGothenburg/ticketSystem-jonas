@@ -25,19 +25,7 @@ namespace TicketSystem.DatabaseRepository
         Venue VenueAdd(string name, string address, string city, string country);
 
 
-        /// <summary>
-        /// Find all venus matching the query
-        /// </summary>
-        /// <param name="query">A text which is user i looking for in the venues</param>
-        /// <returns>A list of venus matching the query</returns>
-        List<Venue> VenuesFind(string query);
-
-        /// <summary>
-        /// Find all venus matching the query
-        /// </summary>
-        /// <param name="query">A text which is user i looking for in the Events</param>
-        /// <returns>A list of venus matching the query</returns>
-        List<TicketEvent> EventFind(string query);
+ 
 
     }
 }
