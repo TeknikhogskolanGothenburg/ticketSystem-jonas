@@ -1,5 +1,8 @@
-﻿@{
+﻿
+
+@{
     ViewData["Title"] = "Home Page";
+    
 }
 
 <!DOCTYPE html>
@@ -8,52 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>2 Column Layout &mdash; Left Menu with Header &amp; Footer</title>
-    <style type="text/css">
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Sans-Serif;
-            line-height: 1.5em;
-            padding-top: 50px;
-        }
-
-
-            #header h1 {
-                margin: 0;
-                padding-top: 15px;
-            }
-
-        main {
-            padding-bottom: 10010px;
-            margin-bottom: -10000px;
-            float: left;
-            width: 100%;
-        }
-
-        #nav {
-            padding-bottom: 10010px;
-            margin-bottom: -10000px;
-            float: left;
-            width: 230px;
-            margin-left: -100%;
-            background: #eee;
-        }
-
-        #wrapper {
-            overflow: hidden;
-        }
-
-        #content {
-            margin-left: 230px; /* Same as 'nav' width */
-        }
-
-        .innertube {
-            margin: 15px; /* Padding for content */
-            margin-top: 0;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
 
 </head>
 
@@ -61,36 +19,10 @@
 
     <header id="header">
         <div class="innertube">
-            <h1>Welcome Administrator</h1>
+            <h1>Welcome to Backoffice</h1>
+            
         </div>
     </header>
-
-    <div id="wrapper">
-
-        <main>
-            <div id="content">
-                <div class="innertube">
-                    <h1>Stuff to delete/add forms here</h1>            
-                </div>
-            </div>
-        </main>
-
-        <nav id="nav">
-            <div class="innertube">
-                <h3><a href="LINK TO ADD NEW VENUE PAGE">Venues</a></h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                </ul>
-                <h3><a href="LINK TO ADD NEW EVENTS PAGE">Events</a></h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                </ul>
-            </div>
-        </nav>
-
-    </div>
 
 
 </body>

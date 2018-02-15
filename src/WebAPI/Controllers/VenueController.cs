@@ -19,9 +19,9 @@ namespace WebAPI.Controllers
 
         // GET: api/Venue
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Venue> Get()
         {
-            return new string[] { "value1", "value2" };
+            return ticketDB.VenueGet();
         }
 
         // GET: api/Venue/5

@@ -19,24 +19,34 @@ namespace Admin.Controllers
         private TicketEvent ticketEvent = new TicketEvent();
         private Venue venue = new Venue();
         private TicketApi ticketApi = new TicketApi();
+        private VenueAddVenue adminVenue = new VenueAddVenue();
+        
 
         public IActionResult Index()
         {
-
-            return View(); //Will return a view of all venues and events
+            List<Venue> venues = new List<Venue> { };
+            venues = ticketApi.VenueGet();
+            return View(); 
+        }
+        public IActionResult Venue()
+        {
+            adminVenue.ExistingVenues = ticketApi.VenueGet();
+            return View(adminVenue);
         }
 
-        public IActionResult AddVenue()
+        //public IActionResult GetVenues()
+        //{
+            
+        //    return View(ticketApi.VenueGet());
+        //}
+
+        public IActionResult VenueAdd(Admin.Models.VenueAddVenue venues)
         {
 
-            venue.VenueName = "Ullevi";
-            venue.Country = "Swe";
-            venue.City = "gbg";
-            venue.Address = "gbg";
-
-            ticketApi.VenueAdd(venue);
-
-            return View();
+   
+            ticketApi.VenueAdd(venues.NewVenue);
+            return RedirectToAction("Venue");
+            
         }
 
         public IActionResult Events()

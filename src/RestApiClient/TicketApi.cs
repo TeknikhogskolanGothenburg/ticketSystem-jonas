@@ -20,6 +20,14 @@ namespace TicketSystem.RestApiClient
             return response.Data;
         }
 
+        public List<Venue> VenueGet()
+        {
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("venue", Method.GET);
+            var response = client.Execute<List<Venue>>(request);
+            return response.Data;
+        }
+
         public Ticket TicketTicketIdGet(int ticketId)
         {
             var client = new RestClient(connectionStringAPI);

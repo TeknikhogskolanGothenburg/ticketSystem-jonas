@@ -79,13 +79,23 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Getall list
+        //Getall Events list
         public List<TicketEvent> EventGet()
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<TicketEvent>("SELECT * FROM Venues ").ToList();
+                return connection.Query<TicketEvent>("SELECT EventName FROM TicketEvent ").ToList();
+            }
+        }
+
+        //Getall Venues list
+        public List<Venue> VenueGet()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                return connection.Query<Venue>("SELECT * FROM Venues ").ToList();
             }
         }
 

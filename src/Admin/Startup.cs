@@ -43,7 +43,7 @@ namespace Admin
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=AddVenue}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

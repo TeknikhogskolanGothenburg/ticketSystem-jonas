@@ -1,0 +1,33 @@
+﻿@model Admin.Models.VenueAddVenue
+
+
+@{
+    ViewData["Title"] = "Venues";
+}
+
+
+
+
+<h3>Adding Venue</h3>
+
+@using (Html.BeginForm("VenueAdd", "Home",FormMethod.Post))
+{
+
+    @Html.LabelFor(m => m.NewVenue.VenueName, "Name")<br />
+    @Html.TextBoxFor(m => m.NewVenue.VenueName, new { @required = true })<br />
+    @Html.LabelFor(m => m.NewVenue.Address, "Address")<br />
+    @Html.TextBoxFor(m => m.NewVenue.Address, new { @required = true })<br />
+    @Html.LabelFor(m => m.NewVenue.City, "City")<br />
+    @Html.TextBoxFor(m => m.NewVenue.City, new { @required = true })<br />
+    @Html.LabelFor(m => m.NewVenue.Country, "Country")<br />
+    @Html.TextBoxFor(m => m.NewVenue.Country, new { @required = true })<br />
+    <input type="submit" value="Add"/>
+}
+
+<h3>List of Venues</h3>
+<select>
+    @foreach (var x in Model.ExistingVenues)
+    {
+    <option value="@x.VenueId">@x.VenueName</option>
+    }
+</select>
