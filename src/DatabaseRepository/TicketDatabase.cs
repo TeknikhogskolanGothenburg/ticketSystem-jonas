@@ -48,13 +48,13 @@ namespace TicketSystem.DatabaseRepository
             }
         }
         //Backoffice removing venue
-        public void VenueRemove(string name)
+        public void VenueRemove(int Id)
         {
            
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("DELETE FROM Venues  WHERE VenueName =" + "'" + name +"'");
+                connection.Query("DELETE FROM Venues  WHERE VenueID =" + "'" + Id +"'");
               
             }
         }
@@ -70,12 +70,12 @@ namespace TicketSystem.DatabaseRepository
         }
 
         //Ticketshop choose an item through the list
-        public List<TicketEvent> EventSelect(int ID)
+        public List<TicketEvent> EventSelect(int Id)
         {
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<TicketEvent>("SELECT * FROM Venues WHERE VenueID = '" + ID + "'") .ToList();
+                return connection.Query<TicketEvent>("SELECT * FROM Venues WHERE VenueID = '" + Id + "'") .ToList();
             }
         }
 

@@ -12,19 +12,13 @@ namespace TicketSystem.RestApiClient
         // Implemented using RestSharp: http://restsharp.org/
         static string connectionStringAPI = "http://localhost:59941/api/";
 
+
+        //Event method requests
         public List<TicketEvent> EventGet()
         {
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("event", Method.GET);
+            var request = new RestRequest("events", Method.GET);
             var response = client.Execute<List<TicketEvent>>(request);
-            return response.Data;
-        }
-
-        public List<Venue> VenueGet()
-        {
-            var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("venue", Method.GET);
-            var response = client.Execute<List<Venue>>(request);
             return response.Data;
         }
 
@@ -43,10 +37,11 @@ namespace TicketSystem.RestApiClient
             return response.Data;
         }
 
+
         public Ticket TicketEventGet(int Id)
         {
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Event/{id}", Method.GET);
+            var request = new RestRequest("Events/{id}", Method.GET);
             request.AddUrlSegment("id", Id);
             var response = client.Execute<Ticket>(request);
 
@@ -57,30 +52,40 @@ namespace TicketSystem.RestApiClient
             return response.Data;
         }
 
-        public Ticket VenueDel(int Id)
-        {
-            var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Venue/{id}", Method.DELETE);
-            request.AddUrlSegment("id", Id);
-            var response = client.Execute<Ticket>(request);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                throw new KeyNotFoundException(string.Format("Venue not found", Id));
-            }
-            return response.Data;
-        }
-
-        public void EventsAdd(TicketEvent ticketEvent)
+        public void EventAdd(TicketEvent ticketEvent)
         {
             var output = JsonConvert.SerializeObject(ticketEvent);
 
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Event", Method.POST);
+            var request = new RestRequest("Events", Method.POST);
             request.AddParameter("application/json", output, ParameterType.RequestBody);
             var response = client.Execute<TicketEvent>(request);
 
         }
+        public void EventRemove(TicketEvent events)
+        {
+            var output = JsonConvert.SerializeObject(events);
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Events", Method.DELETE);
+            request.AddParameter("application/json", output, ParameterType.RequestBody);
+            var response = client.Execute<Venue>(request);
+        }
+
+
+
+
+        //Venue method requests
+        public List<Venue> VenueGet()
+        {
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Venue", Method.GET);
+            var response = client.Execute<List<Venue>>(request);
+            return response.Data;
+        }
+
+
+
 
         public void VenueAdd(Venue venue)
         {
@@ -89,8 +94,14 @@ namespace TicketSystem.RestApiClient
             var request = new RestRequest("Venue", Method.POST);
             request.AddParameter("application/json", output, ParameterType.RequestBody);
             var response = client.Execute<Venue>(request);
-
-
+        }
+        public void VenueRemove(Venue venue)
+        {
+            var output = JsonConvert.SerializeObject(venue);
+            var client = new RestClient(connectionStringAPI);
+            var request = new RestRequest("Venues", Method.DELETE);
+            request.AddParameter("application/json", output, ParameterType.RequestBody);
+            var response = client.Execute<Venue>(request);
         }
 
 

@@ -11,4 +11,10 @@ namespace Admin.Models
         public Venue NewVenue { get; set; }
         public List<Venue> ExistingVenues { get; set; }
     }
+    public class EventAddTicketEvent
+    {
+        public TicketEvent NewEvent { get; set; }
+        public List<TicketEvent> ExistingEvents {get; set;} 
+    }
+
 }

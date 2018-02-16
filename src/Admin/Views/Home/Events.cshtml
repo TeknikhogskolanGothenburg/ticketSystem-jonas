@@ -1,21 +1,36 @@
-﻿@{
+﻿
+
+@model Admin.Models.EventAddTicketEvent
+
+
+@{
     ViewData["Title"] = "Events";
 }
 
-<h3>Adding Venue</h3>
-<form method="post">
-    Venue Name:<br>
-    <input type="text" name="Event Name" value=""><br>
-    Address:<br>
-    <input type="text" name="Description" value=""><br>
-    City:<br><br>
-    <input type="submit" value="Submit">
-</form>
 
-<h3>Events to delete</h3>
-<select>
-    <option value="Event1">Event1</option>
-    <option value="Event2">Event2</option>
-    <option value="Event3">Event3</option>
-    <option value="Event4">Event4</option>
-</select>
+
+
+<h3>Add Event</h3>
+
+@using (Html.BeginForm("EventAdd", "Home", FormMethod.Post))
+{
+
+    @Html.LabelFor(m => m.NewEvent.EventName, "Name")<br />
+    @Html.TextBoxFor(m => m.NewEvent.EventName, new { @required = true })<br />
+    @Html.LabelFor(m => m.NewEvent.EventHtmlDescription, "Description")<br />
+    @Html.TextBoxFor(m => m.NewEvent.EventHtmlDescription, new { @required = true })<br />
+    <input type="submit" value="Add" />
+}
+
+<h3>List of Events</h3>
+@if (Model.ExistingEvents != null)
+{
+
+    <select>
+    @foreach (var x in Model.ExistingEvents)
+    {
+        <option value="@x.TicketEventId">@x.EventName</option>
+    }
+    </select>
+     <input id="Id" type="button" value="Delete" onclick="@Html.ActionLink("EventRemove","Home")"  />
+}

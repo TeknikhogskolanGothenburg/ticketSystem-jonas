@@ -1,16 +1,12 @@
 ﻿@model Admin.Models.VenueAddVenue
 
-
 @{
     ViewData["Title"] = "Venues";
 }
 
+<h3>Add Venue</h3>
 
-
-
-<h3>Adding Venue</h3>
-
-@using (Html.BeginForm("VenueAdd", "Home",FormMethod.Post))
+@using (Html.BeginForm("VenueAdd", "Home", FormMethod.Post))
 {
 
     @Html.LabelFor(m => m.NewVenue.VenueName, "Name")<br />
@@ -21,13 +17,21 @@
     @Html.TextBoxFor(m => m.NewVenue.City, new { @required = true })<br />
     @Html.LabelFor(m => m.NewVenue.Country, "Country")<br />
     @Html.TextBoxFor(m => m.NewVenue.Country, new { @required = true })<br />
-    <input type="submit" value="Add"/>
+    <input type="submit" value="Add" />
 }
 
-<h3>List of Venues</h3>
-<select>
-    @foreach (var x in Model.ExistingVenues)
-    {
-    <option value="@x.VenueId">@x.VenueName</option>
+    <h3>List of Venues</h3>
+    @if (Model.ExistingVenues != null)
+        {
+            @using (Html.BeginForm("VenueRemove", "Home", FormMethod.Post))
+            {
+                <select id="selected">
+                @foreach (var x in Model.ExistingVenues)
+                    {
+                        <option value="@x.VenueId">@x.VenueName</option>
+                    }
+                </select>
+                <input type="button" value="Delete"/>
+            }
+    
     }
-</select>
