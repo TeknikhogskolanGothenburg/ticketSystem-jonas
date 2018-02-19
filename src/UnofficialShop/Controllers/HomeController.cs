@@ -21,7 +21,7 @@ namespace UnofficialShop.Controllers
 
         public IActionResult Index()
         {
-           ticketApi.EventGet();
+           //ticketApi.EventGet();
             return View();
 
         }

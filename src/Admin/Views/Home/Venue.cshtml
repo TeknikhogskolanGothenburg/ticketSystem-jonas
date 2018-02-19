@@ -20,18 +20,23 @@
     <input type="submit" value="Add" />
 }
 
+
     <h3>List of Venues</h3>
+<form>  
     @if (Model.ExistingVenues != null)
         {
             @using (Html.BeginForm("VenueRemove", "Home", FormMethod.Post))
+               
             {
-                <select id="selected">
+                <select id="Venue" name="Venue" >
                 @foreach (var x in Model.ExistingVenues)
                     {
                         <option value="@x.VenueId">@x.VenueName</option>
                     }
                 </select>
-                <input type="button" value="Delete"/>
+                
             }
     
     }
+    <input type ="submit" value="Remove Venue" /> @*Not yet managed to link this to the HomeController method VenueRemove*@
+</form>

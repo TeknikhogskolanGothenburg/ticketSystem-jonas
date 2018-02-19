@@ -19,13 +19,13 @@ namespace Admin.Controllers
         private EventAddTicketEvent adminEvent = new EventAddTicketEvent();
         private TicketApi ticketApi = new TicketApi();
         private VenueAddVenue adminVenue = new VenueAddVenue();
-        
+
         //Index
         public IActionResult Index()
         {
             List<Venue> venues = new List<Venue> { };
             venues = ticketApi.VenueGet();
-            return View(); 
+            return View();
         }
 
         //All actions relating to Venue
@@ -38,17 +38,19 @@ namespace Admin.Controllers
         public IActionResult VenueAdd(VenueAddVenue venues)
         {
 
-   
+
             ticketApi.VenueAdd(venues.NewVenue);
             return RedirectToAction("Venue");
-            
+
         }
 
-        public IActionResult VenueRemove(VenueAddVenue venues)
-        {
-            ticketApi.VenueRemove(venues.NewVenue);
-            return RedirectToAction("Venue");
-        }
+        //Did not manage to finish this method in time.
+        //public IActionResult VenueRemove()
+        //{
+        //    VenueAddVenue venues = Request.Form["Venue"];
+        //    ticketApi.VenueRemove(venues.NewVenue);
+        //    return RedirectToAction("Venue");
+        //}
 
 
         //All actions relating to Events
