@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Program
-  commentId: T:UnofficialShop.Program
-  id: Program
-  parent: UnofficialShop
+- uid: Admin.Models.VenueAddVenue
+  commentId: T:Admin.Models.VenueAddVenue
+  id: VenueAddVenue
+  parent: Admin.Models
   children:
-  - UnofficialShop.Program.BuildWebHost(System.String[])
-  - UnofficialShop.Program.Main(System.String[])
+  - Admin.Models.VenueAddVenue.ExistingVenues
+  - Admin.Models.VenueAddVenue.NewVenue
   langs:
   - csharp
   - vb
-  name: Program
-  nameWithType: Program
-  fullName: UnofficialShop.Program
+  name: VenueAddVenue
+  nameWithType: VenueAddVenue
+  fullName: Admin.Models.VenueAddVenue
   type: Class
   source:
-    id: Program
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 12
+    id: VenueAddVenue
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 8
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - Admin
+  namespace: Admin.Models
   syntax:
-    content: public class Program
-    content.vb: Public Class Program
+    content: public class VenueAddVenue
+    content.vb: Public Class VenueAddVenue
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,83 +40,75 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Program.Main(System.String[])
-  commentId: M:UnofficialShop.Program.Main(System.String[])
-  id: Main(System.String[])
-  parent: UnofficialShop.Program
+- uid: Admin.Models.VenueAddVenue.NewVenue
+  commentId: P:Admin.Models.VenueAddVenue.NewVenue
+  id: NewVenue
+  parent: Admin.Models.VenueAddVenue
   langs:
   - csharp
   - vb
-  name: Main(String[])
-  nameWithType: Program.Main(String[])
-  fullName: UnofficialShop.Program.Main(System.String[])
-  type: Method
+  name: NewVenue
+  nameWithType: VenueAddVenue.NewVenue
+  fullName: Admin.Models.VenueAddVenue.NewVenue
+  type: Property
   source:
-    id: Main
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 14
+    id: NewVenue
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 10
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - Admin
+  namespace: Admin.Models
   syntax:
-    content: public static void Main(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: UnofficialShop.Program.Main*
-  nameWithType.vb: Program.Main(String())
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.Main(System.String())
-  name.vb: Main(String())
-- uid: UnofficialShop.Program.BuildWebHost(System.String[])
-  commentId: M:UnofficialShop.Program.BuildWebHost(System.String[])
-  id: BuildWebHost(System.String[])
-  parent: UnofficialShop.Program
-  langs:
-  - csharp
-  - vb
-  name: BuildWebHost(String[])
-  nameWithType: Program.BuildWebHost(String[])
-  fullName: UnofficialShop.Program.BuildWebHost(System.String[])
-  type: Method
-  source:
-    id: BuildWebHost
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 19
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public static IWebHost BuildWebHost(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
+    content: public Venue NewVenue { get; set; }
+    parameters: []
     return:
-      type: Microsoft.AspNetCore.Hosting.IWebHost
-    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
-  overload: UnofficialShop.Program.BuildWebHost*
-  nameWithType.vb: Program.BuildWebHost(String())
+      type: TicketModel.Venue
+    content.vb: Public Property NewVenue As Venue
+  overload: Admin.Models.VenueAddVenue.NewVenue*
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.BuildWebHost(System.String())
-  name.vb: BuildWebHost(String())
+- uid: Admin.Models.VenueAddVenue.ExistingVenues
+  commentId: P:Admin.Models.VenueAddVenue.ExistingVenues
+  id: ExistingVenues
+  parent: Admin.Models.VenueAddVenue
+  langs:
+  - csharp
+  - vb
+  name: ExistingVenues
+  nameWithType: VenueAddVenue.ExistingVenues
+  fullName: Admin.Models.VenueAddVenue.ExistingVenues
+  type: Property
+  source:
+    id: ExistingVenues
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 11
+  assemblies:
+  - Admin
+  namespace: Admin.Models
+  syntax:
+    content: public List<Venue> ExistingVenues { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TicketModel.Venue}
+    content.vb: Public Property ExistingVenues As List(Of Venue)
+  overload: Admin.Models.VenueAddVenue.ExistingVenues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: Admin.Models
+  commentId: N:Admin.Models
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: Admin.Models
+  nameWithType: Admin.Models
+  fullName: Admin.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -409,53 +401,115 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Program.Main*
-  commentId: Overload:UnofficialShop.Program.Main
+- uid: Admin.Models.VenueAddVenue.NewVenue*
+  commentId: Overload:Admin.Models.VenueAddVenue.NewVenue
   isExternal: false
-  name: Main
-  nameWithType: Program.Main
-  fullName: UnofficialShop.Program.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
+  name: NewVenue
+  nameWithType: VenueAddVenue.NewVenue
+  fullName: Admin.Models.VenueAddVenue.NewVenue
+- uid: TicketModel.Venue
+  commentId: T:TicketModel.Venue
+  parent: TicketModel
+  isExternal: false
+  name: Venue
+  nameWithType: Venue
+  fullName: TicketModel.Venue
+- uid: TicketModel
+  commentId: N:TicketModel
+  isExternal: false
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
+- uid: Admin.Models.VenueAddVenue.ExistingVenues*
+  commentId: Overload:Admin.Models.VenueAddVenue.ExistingVenues
+  isExternal: false
+  name: ExistingVenues
+  nameWithType: VenueAddVenue.ExistingVenues
+  fullName: Admin.Models.VenueAddVenue.ExistingVenues
+- uid: System.Collections.Generic.List{TicketModel.Venue}
+  commentId: T:System.Collections.Generic.List{TicketModel.Venue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Venue>
+  nameWithType: List<Venue>
+  fullName: System.Collections.Generic.List<TicketModel.Venue>
+  nameWithType.vb: List(Of Venue)
+  fullName.vb: System.Collections.Generic.List(Of TicketModel.Venue)
+  name.vb: List(Of Venue)
   spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketModel.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketModel.Venue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: UnofficialShop.Program.BuildWebHost*
-  commentId: Overload:UnofficialShop.Program.BuildWebHost
-  isExternal: false
-  name: BuildWebHost
-  nameWithType: Program.BuildWebHost
-  fullName: UnofficialShop.Program.BuildWebHost
-- uid: Microsoft.AspNetCore.Hosting.IWebHost
-  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
-  parent: Microsoft.AspNetCore.Hosting
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketModel.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketModel.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: IWebHost
-  nameWithType: IWebHost
-  fullName: Microsoft.AspNetCore.Hosting.IWebHost
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

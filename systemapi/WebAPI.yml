@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebAPI
+  commentId: N:WebAPI
+  id: WebAPI
+  children:
+  - WebAPI.Program
+  - WebAPI.Startup
+  langs:
+  - csharp
+  - vb
+  name: WebAPI
+  nameWithType: WebAPI
+  fullName: WebAPI
+  type: Namespace
+  assemblies:
+  - WebAPI
+references:
+- uid: WebAPI.Program
+  commentId: T:WebAPI.Program
+  isExternal: false
+  name: Program
+  nameWithType: Program
+  fullName: WebAPI.Program
+- uid: WebAPI.Startup
+  commentId: T:WebAPI.Startup
+  isExternal: false
+  name: Startup
+  nameWithType: Startup
+  fullName: WebAPI.Startup

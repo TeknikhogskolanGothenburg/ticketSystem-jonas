@@ -1,0 +1,131 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketModel.PaymentStatus
+  commentId: T:TicketModel.PaymentStatus
+  id: PaymentStatus
+  parent: TicketModel
+  children:
+  - TicketModel.PaymentStatus.PaymentApproved
+  - TicketModel.PaymentStatus.PaymentRejected
+  - TicketModel.PaymentStatus.UnknownError
+  langs:
+  - csharp
+  - vb
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketModel.PaymentStatus
+  type: Enum
+  source:
+    id: PaymentStatus
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentStatus.cs
+    startLine: 2
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public enum PaymentStatus
+    content.vb: Public Enum PaymentStatus
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: TicketModel.PaymentStatus.PaymentApproved
+  commentId: F:TicketModel.PaymentStatus.PaymentApproved
+  id: PaymentApproved
+  parent: TicketModel.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: PaymentApproved
+  nameWithType: PaymentStatus.PaymentApproved
+  fullName: TicketModel.PaymentStatus.PaymentApproved
+  type: Field
+  source:
+    id: PaymentApproved
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentStatus.cs
+    startLine: 4
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: PaymentApproved = 0
+    return:
+      type: TicketModel.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: TicketModel.PaymentStatus.PaymentRejected
+  commentId: F:TicketModel.PaymentStatus.PaymentRejected
+  id: PaymentRejected
+  parent: TicketModel.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: PaymentRejected
+  nameWithType: PaymentStatus.PaymentRejected
+  fullName: TicketModel.PaymentStatus.PaymentRejected
+  type: Field
+  source:
+    id: PaymentRejected
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentStatus.cs
+    startLine: 5
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: PaymentRejected = 1
+    return:
+      type: TicketModel.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: TicketModel.PaymentStatus.UnknownError
+  commentId: F:TicketModel.PaymentStatus.UnknownError
+  id: UnknownError
+  parent: TicketModel.PaymentStatus
+  langs:
+  - csharp
+  - vb
+  name: UnknownError
+  nameWithType: PaymentStatus.UnknownError
+  fullName: TicketModel.PaymentStatus.UnknownError
+  type: Field
+  source:
+    id: UnknownError
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentStatus.cs
+    startLine: 6
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: UnknownError = 2
+    return:
+      type: TicketModel.PaymentStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: TicketModel
+  commentId: N:TicketModel
+  isExternal: false
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
+- uid: TicketModel.PaymentStatus
+  commentId: T:TicketModel.PaymentStatus
+  parent: TicketModel
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketModel.PaymentStatus

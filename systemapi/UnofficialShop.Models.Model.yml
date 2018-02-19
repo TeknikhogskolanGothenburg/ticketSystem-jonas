@@ -1,31 +1,30 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Startup
-  commentId: T:UnofficialShop.Startup
-  id: Startup
-  parent: UnofficialShop
+- uid: UnofficialShop.Models.Model
+  commentId: T:UnofficialShop.Models.Model
+  id: Model
+  parent: UnofficialShop.Models
   children:
-  - UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  - UnofficialShop.Startup.Configuration
-  - UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  - UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - UnofficialShop.Models.Model.events
+  - UnofficialShop.Models.Model.ticketEvent
+  - UnofficialShop.Models.Model.venues
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: UnofficialShop.Startup
+  name: Model
+  nameWithType: Model
+  fullName: UnofficialShop.Models.Model
   type: Class
   source:
-    id: Startup
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 11
+    id: Model
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\Model.cs
+    startLine: 9
   assemblies:
   - UnofficialShop
-  namespace: UnofficialShop
+  namespace: UnofficialShop.Models
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: public class Model
+    content.vb: Public Class Model
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,133 +41,94 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  commentId: M:UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
-  parent: UnofficialShop.Startup
+- uid: UnofficialShop.Models.Model.venues
+  commentId: F:UnofficialShop.Models.Model.venues
+  id: venues
+  parent: UnofficialShop.Models.Model
   langs:
   - csharp
   - vb
-  name: Startup(IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-  fullName: UnofficialShop.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
-  type: Constructor
+  name: venues
+  nameWithType: Model.venues
+  fullName: UnofficialShop.Models.Model.venues
+  type: Field
   source:
-    id: .ctor
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
+    id: venues
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\Model.cs
+    startLine: 11
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Models
+  syntax:
+    content: public List<Venue> venues
+    return:
+      type: System.Collections.Generic.List{TicketModel.Venue}
+    content.vb: Public venues As List(Of Venue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Models.Model.events
+  commentId: F:UnofficialShop.Models.Model.events
+  id: events
+  parent: UnofficialShop.Models.Model
+  langs:
+  - csharp
+  - vb
+  name: events
+  nameWithType: Model.events
+  fullName: UnofficialShop.Models.Model.events
+  type: Field
+  source:
+    id: events
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\Model.cs
+    startLine: 12
+  assemblies:
+  - UnofficialShop
+  namespace: UnofficialShop.Models
+  syntax:
+    content: public List<TicketEvent> events
+    return:
+      type: System.Collections.Generic.List{TicketModel.TicketEvent}
+    content.vb: Public events As List(Of TicketEvent)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: UnofficialShop.Models.Model.ticketEvent
+  commentId: F:UnofficialShop.Models.Model.ticketEvent
+  id: ticketEvent
+  parent: UnofficialShop.Models.Model
+  langs:
+  - csharp
+  - vb
+  name: ticketEvent
+  nameWithType: Model.ticketEvent
+  fullName: UnofficialShop.Models.Model.ticketEvent
+  type: Field
+  source:
+    id: ticketEvent
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Models\Model.cs
     startLine: 13
   assemblies:
   - UnofficialShop
-  namespace: UnofficialShop
+  namespace: UnofficialShop.Models
   syntax:
-    content: public Startup(IConfiguration configuration)
-    parameters:
-    - id: configuration
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public Sub New(configuration As IConfiguration)
-  overload: UnofficialShop.Startup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: UnofficialShop.Startup.Configuration
-  commentId: P:UnofficialShop.Startup.Configuration
-  id: Configuration
-  parent: UnofficialShop.Startup
-  langs:
-  - csharp
-  - vb
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
-  type: Property
-  source:
-    id: Configuration
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 18
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public IConfiguration Configuration { get; }
-    parameters: []
+    content: public TicketEvent ticketEvent
     return:
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public ReadOnly Property Configuration As IConfiguration
-  overload: UnofficialShop.Startup.Configuration*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  commentId: M:UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  parent: UnofficialShop.Startup
-  langs:
-  - csharp
-  - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  type: Method
-  source:
-    id: ConfigureServices
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 21
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public void ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
-  overload: UnofficialShop.Startup.ConfigureServices*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  commentId: M:UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  parent: UnofficialShop.Startup
-  langs:
-  - csharp
-  - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
-  fullName: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  type: Method
-  source:
-    id: Configure
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 27
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-    parameters:
-    - id: app
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-    - id: env
-      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
-  overload: UnofficialShop.Startup.Configure*
+      type: TicketModel.TicketEvent
+    content.vb: Public ticketEvent As TicketEvent
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: UnofficialShop.Models
+  commentId: N:UnofficialShop.Models
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: UnofficialShop.Models
+  nameWithType: UnofficialShop.Models
+  fullName: UnofficialShop.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -461,79 +421,145 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Startup.#ctor*
-  commentId: Overload:UnofficialShop.Startup.#ctor
-  isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: UnofficialShop.Startup.Startup
-- uid: Microsoft.Extensions.Configuration.IConfiguration
-  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
-  parent: Microsoft.Extensions.Configuration
+- uid: System.Collections.Generic.List{TicketModel.Venue}
+  commentId: T:System.Collections.Generic.List{TicketModel.Venue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Venue>
+  nameWithType: List<Venue>
+  fullName: System.Collections.Generic.List<TicketModel.Venue>
+  nameWithType.vb: List(Of Venue)
+  fullName.vb: System.Collections.Generic.List(Of TicketModel.Venue)
+  name.vb: List(Of Venue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketModel.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketModel.Venue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketModel.Venue
+    name: Venue
+    nameWithType: Venue
+    fullName: TicketModel.Venue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: IConfiguration
-  nameWithType: IConfiguration
-  fullName: Microsoft.Extensions.Configuration.IConfiguration
-- uid: Microsoft.Extensions.Configuration
-  commentId: N:Microsoft.Extensions.Configuration
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
-  name: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-- uid: UnofficialShop.Startup.Configuration*
-  commentId: Overload:UnofficialShop.Startup.Configuration
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{TicketModel.TicketEvent}
+  commentId: T:System.Collections.Generic.List{TicketModel.TicketEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketEvent>
+  nameWithType: List<TicketEvent>
+  fullName: System.Collections.Generic.List<TicketModel.TicketEvent>
+  nameWithType.vb: List(Of TicketEvent)
+  fullName.vb: System.Collections.Generic.List(Of TicketModel.TicketEvent)
+  name.vb: List(Of TicketEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TicketModel.TicketEvent
+  commentId: T:TicketModel.TicketEvent
+  parent: TicketModel
   isExternal: false
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
-- uid: UnofficialShop.Startup.ConfigureServices*
-  commentId: Overload:UnofficialShop.Startup.ConfigureServices
+  name: TicketEvent
+  nameWithType: TicketEvent
+  fullName: TicketModel.TicketEvent
+- uid: TicketModel
+  commentId: N:TicketModel
   isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: UnofficialShop.Startup.ConfigureServices
-- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
-  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
-  parent: Microsoft.Extensions.DependencyInjection
-  isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: Microsoft.Extensions.DependencyInjection
-  commentId: N:Microsoft.Extensions.DependencyInjection
-  isExternal: false
-  name: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-- uid: UnofficialShop.Startup.Configure*
-  commentId: Overload:UnofficialShop.Startup.Configure
-  isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: UnofficialShop.Startup.Configure
-- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
-  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
-  parent: Microsoft.AspNetCore.Builder
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
-- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  parent: Microsoft.AspNetCore.Hosting
-  isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
-  isExternal: false
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
-  isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel

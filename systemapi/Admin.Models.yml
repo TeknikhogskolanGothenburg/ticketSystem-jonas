@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: Admin.Models
+  commentId: N:Admin.Models
+  id: Admin.Models
+  children:
+  - Admin.Models.ErrorViewModel
+  - Admin.Models.EventAddTicketEvent
+  - Admin.Models.VenueAddVenue
+  langs:
+  - csharp
+  - vb
+  name: Admin.Models
+  nameWithType: Admin.Models
+  fullName: Admin.Models
+  type: Namespace
+  assemblies:
+  - Admin
+references:
+- uid: Admin.Models.ErrorViewModel
+  commentId: T:Admin.Models.ErrorViewModel
+  isExternal: false
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: Admin.Models.ErrorViewModel
+- uid: Admin.Models.VenueAddVenue
+  commentId: T:Admin.Models.VenueAddVenue
+  parent: Admin.Models
+  isExternal: false
+  name: VenueAddVenue
+  nameWithType: VenueAddVenue
+  fullName: Admin.Models.VenueAddVenue
+- uid: Admin.Models.EventAddTicketEvent
+  commentId: T:Admin.Models.EventAddTicketEvent
+  parent: Admin.Models
+  isExternal: false
+  name: EventAddTicketEvent
+  nameWithType: EventAddTicketEvent
+  fullName: Admin.Models.EventAddTicketEvent
+- uid: Admin.Models
+  commentId: N:Admin.Models
+  isExternal: false
+  name: Admin.Models
+  nameWithType: Admin.Models
+  fullName: Admin.Models

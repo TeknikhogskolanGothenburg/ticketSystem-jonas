@@ -1,31 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.DatabaseRepository.Model.Customer
-  commentId: T:TicketSystem.DatabaseRepository.Model.Customer
-  id: Customer
-  parent: TicketSystem.DatabaseRepository.Model
+- uid: Admin.Startup
+  commentId: T:Admin.Startup
+  id: Startup
+  parent: Admin
   children:
-  - TicketSystem.DatabaseRepository.Model.Customer.Age
-  - TicketSystem.DatabaseRepository.Model.Customer.EMail
-  - TicketSystem.DatabaseRepository.Model.Customer.FirstName
-  - TicketSystem.DatabaseRepository.Model.Customer.Phone
+  - Admin.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  - Admin.Startup.Configuration
+  - Admin.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  - Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   langs:
   - csharp
   - vb
-  name: Customer
-  nameWithType: Customer
-  fullName: TicketSystem.DatabaseRepository.Model.Customer
+  name: Startup
+  nameWithType: Startup
+  fullName: Admin.Startup
   type: Class
   source:
-    id: Customer
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
-    startLine: 6
+    id: Startup
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Startup.cs
+    startLine: 11
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - Admin
+  namespace: Admin
   syntax:
-    content: public class Customer
-    content.vb: Public Class Customer
+    content: public class Startup
+    content.vb: Public Class Startup
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,137 +42,133 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.DatabaseRepository.Model.Customer.FirstName
-  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.FirstName
-  id: FirstName
-  parent: TicketSystem.DatabaseRepository.Model.Customer
+- uid: Admin.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:Admin.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
+  parent: Admin.Startup
   langs:
   - csharp
   - vb
-  name: FirstName
-  nameWithType: Customer.FirstName
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.FirstName
-  type: Property
+  name: Startup(IConfiguration)
+  nameWithType: Startup.Startup(IConfiguration)
+  fullName: Admin.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
+  type: Constructor
   source:
-    id: FirstName
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
-    startLine: 8
+    id: .ctor
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Startup.cs
+    startLine: 13
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - Admin
+  namespace: Admin
   syntax:
-    content: public string FirstName { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property FirstName As String
-  overload: TicketSystem.DatabaseRepository.Model.Customer.FirstName*
+    content: public Startup(IConfiguration configuration)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public Sub New(configuration As IConfiguration)
+  overload: Admin.Startup.#ctor*
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.Customer.Age
-  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.Age
-  id: Age
-  parent: TicketSystem.DatabaseRepository.Model.Customer
+- uid: Admin.Startup.Configuration
+  commentId: P:Admin.Startup.Configuration
+  id: Configuration
+  parent: Admin.Startup
   langs:
   - csharp
   - vb
-  name: Age
-  nameWithType: Customer.Age
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.Age
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: Admin.Startup.Configuration
   type: Property
   source:
-    id: Age
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
-    startLine: 9
+    id: Configuration
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Startup.cs
+    startLine: 18
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - Admin
+  namespace: Admin
   syntax:
-    content: public int Age { get; set; }
+    content: public IConfiguration Configuration { get; }
     parameters: []
     return:
-      type: System.Int32
-    content.vb: Public Property Age As Integer
-  overload: TicketSystem.DatabaseRepository.Model.Customer.Age*
+      type: Microsoft.Extensions.Configuration.IConfiguration
+    content.vb: Public ReadOnly Property Configuration As IConfiguration
+  overload: Admin.Startup.Configuration*
   modifiers.csharp:
   - public
   - get
-  - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.Customer.EMail
-  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.EMail
-  id: EMail
-  parent: TicketSystem.DatabaseRepository.Model.Customer
+  - ReadOnly
+- uid: Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  parent: Admin.Startup
   langs:
   - csharp
   - vb
-  name: EMail
-  nameWithType: Customer.EMail
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.EMail
-  type: Property
+  name: ConfigureServices(IServiceCollection)
+  nameWithType: Startup.ConfigureServices(IServiceCollection)
+  fullName: Admin.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  type: Method
   source:
-    id: EMail
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
-    startLine: 10
+    id: ConfigureServices
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Startup.cs
+    startLine: 21
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - Admin
+  namespace: Admin
   syntax:
-    content: public string EMail { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property EMail As String
-  overload: TicketSystem.DatabaseRepository.Model.Customer.EMail*
+    content: public void ConfigureServices(IServiceCollection services)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
+  overload: Admin.Startup.ConfigureServices*
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.Customer.Phone
-  commentId: P:TicketSystem.DatabaseRepository.Model.Customer.Phone
-  id: Phone
-  parent: TicketSystem.DatabaseRepository.Model.Customer
+- uid: Admin.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  commentId: M:Admin.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  parent: Admin.Startup
   langs:
   - csharp
   - vb
-  name: Phone
-  nameWithType: Customer.Phone
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.Phone
-  type: Property
+  name: Configure(IApplicationBuilder, IHostingEnvironment)
+  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
+  fullName: Admin.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  type: Method
   source:
-    id: Phone
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\Customer.cs
-    startLine: 11
+    id: Configure
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Startup.cs
+    startLine: 27
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - Admin
+  namespace: Admin
   syntax:
-    content: public double Phone { get; set; }
-    parameters: []
-    return:
-      type: System.Double
-    content.vb: Public Property Phone As Double
-  overload: TicketSystem.DatabaseRepository.Model.Customer.Phone*
+    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+    - id: env
+      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
+  overload: Admin.Startup.Configure*
   modifiers.csharp:
   - public
-  - get
-  - set
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.DatabaseRepository.Model
-  commentId: N:TicketSystem.DatabaseRepository.Model
+- uid: Admin
+  commentId: N:Admin
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Model
-  nameWithType: TicketSystem.DatabaseRepository.Model
-  fullName: TicketSystem.DatabaseRepository.Model
+  name: Admin
+  nameWithType: Admin
+  fullName: Admin
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -465,48 +461,79 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.DatabaseRepository.Model.Customer.FirstName*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.FirstName
+- uid: Admin.Startup.#ctor*
+  commentId: Overload:Admin.Startup.#ctor
   isExternal: false
-  name: FirstName
-  nameWithType: Customer.FirstName
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.FirstName
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+  name: Startup
+  nameWithType: Startup.Startup
+  fullName: Admin.Startup.Startup
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: TicketSystem.DatabaseRepository.Model.Customer.Age*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.Age
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
   isExternal: false
-  name: Age
-  nameWithType: Customer.Age
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.Age
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+- uid: Admin.Startup.Configuration*
+  commentId: Overload:Admin.Startup.Configuration
+  isExternal: false
+  name: Configuration
+  nameWithType: Startup.Configuration
+  fullName: Admin.Startup.Configuration
+- uid: Admin.Startup.ConfigureServices*
+  commentId: Overload:Admin.Startup.ConfigureServices
+  isExternal: false
+  name: ConfigureServices
+  nameWithType: Startup.ConfigureServices
+  fullName: Admin.Startup.ConfigureServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
   isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: TicketSystem.DatabaseRepository.Model.Customer.EMail*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.EMail
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
   isExternal: false
-  name: EMail
-  nameWithType: Customer.EMail
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.EMail
-- uid: TicketSystem.DatabaseRepository.Model.Customer.Phone*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.Customer.Phone
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+- uid: Admin.Startup.Configure*
+  commentId: Overload:Admin.Startup.Configure
   isExternal: false
-  name: Phone
-  nameWithType: Customer.Phone
-  fullName: TicketSystem.DatabaseRepository.Model.Customer.Phone
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
+  name: Configure
+  nameWithType: Startup.Configure
+  fullName: Admin.Startup.Configure
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
   isExternal: true
-  name: Double
-  nameWithType: Double
-  fullName: System.Double
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
+  parent: Microsoft.AspNetCore.Hosting
+  isExternal: true
+  name: IHostingEnvironment
+  nameWithType: IHostingEnvironment
+  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: false
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+- uid: Microsoft.AspNetCore.Hosting
+  commentId: N:Microsoft.AspNetCore.Hosting
+  isExternal: false
+  name: Microsoft.AspNetCore.Hosting
+  nameWithType: Microsoft.AspNetCore.Hosting
+  fullName: Microsoft.AspNetCore.Hosting

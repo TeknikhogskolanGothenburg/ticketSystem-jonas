@@ -1,36 +1,43 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Controllers.HomeController
-  commentId: T:UnofficialShop.Controllers.HomeController
-  id: HomeController
-  parent: UnofficialShop.Controllers
+- uid: WebAPI.Controllers.EventController
+  commentId: T:WebAPI.Controllers.EventController
+  id: EventController
+  parent: WebAPI.Controllers
   children:
-  - UnofficialShop.Controllers.HomeController.About
-  - UnofficialShop.Controllers.HomeController.Contact
-  - UnofficialShop.Controllers.HomeController.Error
-  - UnofficialShop.Controllers.HomeController.Index
-  - UnofficialShop.Controllers.HomeController.ticketApi
+  - WebAPI.Controllers.EventController.Delete(System.Int32)
+  - WebAPI.Controllers.EventController.Get
+  - WebAPI.Controllers.EventController.Get(System.Int32)
+  - WebAPI.Controllers.EventController.Post(System.String)
+  - WebAPI.Controllers.EventController.Put(System.Int32,System.String)
   langs:
   - csharp
   - vb
-  name: HomeController
-  nameWithType: HomeController
-  fullName: UnofficialShop.Controllers.HomeController
+  name: EventController
+  nameWithType: EventController
+  fullName: WebAPI.Controllers.EventController
   type: Class
   source:
-    id: HomeController
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 13
+    id: EventController
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 11
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - WebAPI
+  namespace: WebAPI.Controllers
   syntax:
-    content: 'public class HomeController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
+    content: >-
+      [Produces("application/json", new string[]{})]
+
+      [Route("api/Event")]
+
+      public class EventController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
     content.vb: >-
-      Public Class HomeController
+      <Produces("application/json", New String() {})>
 
+      <Route("api/Event")>
+
+      Public Class EventController
           Inherits Controller
-
           Implements IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable
   inheritance:
   - System.Object
@@ -208,160 +215,237 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: api/Event
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Controllers.HomeController.ticketApi
-  commentId: F:UnofficialShop.Controllers.HomeController.ticketApi
-  id: ticketApi
-  parent: UnofficialShop.Controllers.HomeController
+- uid: WebAPI.Controllers.EventController.Get
+  commentId: M:WebAPI.Controllers.EventController.Get
+  id: Get
+  parent: WebAPI.Controllers.EventController
   langs:
   - csharp
   - vb
-  name: ticketApi
-  nameWithType: HomeController.ticketApi
-  fullName: UnofficialShop.Controllers.HomeController.ticketApi
-  type: Field
-  source:
-    id: ticketApi
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 15
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
-  syntax:
-    content: public static TicketApi ticketApi
-    return:
-      type: TicketSystem.RestApiClient.TicketApi
-    content.vb: Public Shared ticketApi As TicketApi
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: UnofficialShop.Controllers.HomeController.Index
-  commentId: M:UnofficialShop.Controllers.HomeController.Index
-  id: Index
-  parent: UnofficialShop.Controllers.HomeController
-  langs:
-  - csharp
-  - vb
-  name: Index()
-  nameWithType: HomeController.Index()
-  fullName: UnofficialShop.Controllers.HomeController.Index()
+  name: Get()
+  nameWithType: EventController.Get()
+  fullName: WebAPI.Controllers.EventController.Get()
   type: Method
   source:
-    id: Index
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 21
+    id: Get
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 18
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - WebAPI
+  namespace: WebAPI.Controllers
   syntax:
-    content: public IActionResult Index()
+    content: >-
+      [HttpGet]
+
+      public IEnumerable<TicketEvent> Get()
     return:
-      type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function Index As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Index*
+      type: System.Collections.Generic.IEnumerable{TicketModel.TicketEvent}
+    content.vb: >-
+      <HttpGet>
+
+      Public Function Get As IEnumerable(Of TicketEvent)
+  overload: WebAPI.Controllers.EventController.Get*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.About
-  commentId: M:UnofficialShop.Controllers.HomeController.About
-  id: About
-  parent: UnofficialShop.Controllers.HomeController
+- uid: WebAPI.Controllers.EventController.Get(System.Int32)
+  commentId: M:WebAPI.Controllers.EventController.Get(System.Int32)
+  id: Get(System.Int32)
+  parent: WebAPI.Controllers.EventController
   langs:
   - csharp
   - vb
-  name: About()
-  nameWithType: HomeController.About()
-  fullName: UnofficialShop.Controllers.HomeController.About()
+  name: Get(Int32)
+  nameWithType: EventController.Get(Int32)
+  fullName: WebAPI.Controllers.EventController.Get(System.Int32)
   type: Method
   source:
-    id: About
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 28
+    id: Get
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 26
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - WebAPI
+  namespace: WebAPI.Controllers
   syntax:
-    content: public IActionResult About()
+    content: >-
+      [HttpGet("{id}")]
+
+      public string Get(int id)
+    parameters:
+    - id: id
+      type: System.Int32
     return:
-      type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function About As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.About*
+      type: System.String
+    content.vb: >-
+      <HttpGet("{id}")>
+
+      Public Function Get(id As Integer) As String
+  overload: WebAPI.Controllers.EventController.Get*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{id}'
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.Contact
-  commentId: M:UnofficialShop.Controllers.HomeController.Contact
-  id: Contact
-  parent: UnofficialShop.Controllers.HomeController
+- uid: WebAPI.Controllers.EventController.Post(System.String)
+  commentId: M:WebAPI.Controllers.EventController.Post(System.String)
+  id: Post(System.String)
+  parent: WebAPI.Controllers.EventController
   langs:
   - csharp
   - vb
-  name: Contact()
-  nameWithType: HomeController.Contact()
-  fullName: UnofficialShop.Controllers.HomeController.Contact()
+  name: Post(String)
+  nameWithType: EventController.Post(String)
+  fullName: WebAPI.Controllers.EventController.Post(System.String)
   type: Method
   source:
-    id: Contact
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 34
+    id: Post
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 33
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - WebAPI
+  namespace: WebAPI.Controllers
   syntax:
-    content: public IActionResult Contact()
-    return:
-      type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function Contact As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Contact*
+    content: >-
+      [HttpPost]
+
+      public void Post([FromBody] string value)
+    parameters:
+    - id: value
+      type: System.String
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    content.vb: >-
+      <HttpPost>
+
+      Public Sub Post(value As String)
+  overload: WebAPI.Controllers.EventController.Post*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPostAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPostAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.Error
-  commentId: M:UnofficialShop.Controllers.HomeController.Error
-  id: Error
-  parent: UnofficialShop.Controllers.HomeController
+- uid: WebAPI.Controllers.EventController.Put(System.Int32,System.String)
+  commentId: M:WebAPI.Controllers.EventController.Put(System.Int32,System.String)
+  id: Put(System.Int32,System.String)
+  parent: WebAPI.Controllers.EventController
   langs:
   - csharp
   - vb
-  name: Error()
-  nameWithType: HomeController.Error()
-  fullName: UnofficialShop.Controllers.HomeController.Error()
+  name: Put(Int32, String)
+  nameWithType: EventController.Put(Int32, String)
+  fullName: WebAPI.Controllers.EventController.Put(System.Int32, System.String)
   type: Method
   source:
-    id: Error
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 41
+    id: Put
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 39
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - WebAPI
+  namespace: WebAPI.Controllers
   syntax:
-    content: public IActionResult Error()
-    return:
-      type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function Error As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Error*
+    content: >-
+      [HttpPut("{id}")]
+
+      public void Put(int id, [FromBody] string value)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: value
+      type: System.String
+      attributes:
+      - type: Microsoft.AspNetCore.Mvc.FromBodyAttribute
+        ctor: Microsoft.AspNetCore.Mvc.FromBodyAttribute.#ctor
+        arguments: []
+    content.vb: >-
+      <HttpPut("{id}")>
+
+      Public Sub Put(id As Integer, value As String)
+  overload: WebAPI.Controllers.EventController.Put*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpPutAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpPutAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{id}'
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WebAPI.Controllers.EventController.Delete(System.Int32)
+  commentId: M:WebAPI.Controllers.EventController.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: WebAPI.Controllers.EventController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: EventController.Delete(Int32)
+  fullName: WebAPI.Controllers.EventController.Delete(System.Int32)
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Controllers\EventController.cs
+    startLine: 45
+  assemblies:
+  - WebAPI
+  namespace: WebAPI.Controllers
+  syntax:
+    content: >-
+      [HttpDelete("{id}")]
+
+      public void Delete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: >-
+      <HttpDelete("{id}")>
+
+      Public Sub Delete(id As Integer)
+  overload: WebAPI.Controllers.EventController.Delete*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpDeleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: '{id}'
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop.Controllers
-  commentId: N:UnofficialShop.Controllers
+- uid: WebAPI.Controllers
+  commentId: N:WebAPI.Controllers
   isExternal: false
-  name: UnofficialShop.Controllers
-  nameWithType: UnofficialShop.Controllers
-  fullName: UnofficialShop.Controllers
+  name: WebAPI.Controllers
+  nameWithType: WebAPI.Controllers
+  fullName: WebAPI.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -10432,47 +10516,128 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketSystem.RestApiClient.TicketApi
-  commentId: T:TicketSystem.RestApiClient.TicketApi
-  parent: TicketSystem.RestApiClient
+- uid: WebAPI.Controllers.EventController.Get*
+  commentId: Overload:WebAPI.Controllers.EventController.Get
   isExternal: false
-  name: TicketApi
-  nameWithType: TicketApi
-  fullName: TicketSystem.RestApiClient.TicketApi
-- uid: TicketSystem.RestApiClient
-  commentId: N:TicketSystem.RestApiClient
-  isExternal: false
-  name: TicketSystem.RestApiClient
-  nameWithType: TicketSystem.RestApiClient
-  fullName: TicketSystem.RestApiClient
-- uid: UnofficialShop.Controllers.HomeController.Index*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Index
-  isExternal: false
-  name: Index
-  nameWithType: HomeController.Index
-  fullName: UnofficialShop.Controllers.HomeController.Index
-- uid: Microsoft.AspNetCore.Mvc.IActionResult
-  commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
-  parent: Microsoft.AspNetCore.Mvc
+  name: Get
+  nameWithType: EventController.Get
+  fullName: WebAPI.Controllers.EventController.Get
+- uid: System.Collections.Generic.IEnumerable{TicketModel.TicketEvent}
+  commentId: T:System.Collections.Generic.IEnumerable{TicketModel.TicketEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TicketEvent>
+  nameWithType: IEnumerable<TicketEvent>
+  fullName: System.Collections.Generic.IEnumerable<TicketModel.TicketEvent>
+  nameWithType.vb: IEnumerable(Of TicketEvent)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TicketModel.TicketEvent)
+  name.vb: IEnumerable(Of TicketEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
-  name: IActionResult
-  nameWithType: IActionResult
-  fullName: Microsoft.AspNetCore.Mvc.IActionResult
-- uid: UnofficialShop.Controllers.HomeController.About*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.About
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
-  name: About
-  nameWithType: HomeController.About
-  fullName: UnofficialShop.Controllers.HomeController.About
-- uid: UnofficialShop.Controllers.HomeController.Contact*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Contact
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: WebAPI.Controllers.EventController.Post*
+  commentId: Overload:WebAPI.Controllers.EventController.Post
   isExternal: false
-  name: Contact
-  nameWithType: HomeController.Contact
-  fullName: UnofficialShop.Controllers.HomeController.Contact
-- uid: UnofficialShop.Controllers.HomeController.Error*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Error
+  name: Post
+  nameWithType: EventController.Post
+  fullName: WebAPI.Controllers.EventController.Post
+- uid: WebAPI.Controllers.EventController.Put*
+  commentId: Overload:WebAPI.Controllers.EventController.Put
   isExternal: false
-  name: Error
-  nameWithType: HomeController.Error
-  fullName: UnofficialShop.Controllers.HomeController.Error
+  name: Put
+  nameWithType: EventController.Put
+  fullName: WebAPI.Controllers.EventController.Put
+- uid: WebAPI.Controllers.EventController.Delete*
+  commentId: Overload:WebAPI.Controllers.EventController.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: EventController.Delete
+  fullName: WebAPI.Controllers.EventController.Delete

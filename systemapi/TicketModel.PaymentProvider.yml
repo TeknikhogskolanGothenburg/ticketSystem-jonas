@@ -1,31 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Program
-  commentId: T:UnofficialShop.Program
-  id: Program
-  parent: UnofficialShop
+- uid: TicketModel.PaymentProvider
+  commentId: T:TicketModel.PaymentProvider
+  id: PaymentProvider
+  parent: TicketModel
   children:
-  - UnofficialShop.Program.BuildWebHost(System.String[])
-  - UnofficialShop.Program.Main(System.String[])
+  - TicketModel.PaymentProvider.Pay(System.Decimal,System.String,System.String)
   langs:
   - csharp
   - vb
-  name: Program
-  nameWithType: Program
-  fullName: UnofficialShop.Program
+  name: PaymentProvider
+  nameWithType: PaymentProvider
+  fullName: TicketModel.PaymentProvider
   type: Class
   source:
-    id: Program
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 12
+    id: PaymentProvider
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentProvider.cs
+    startLine: 5
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public class Program
-    content.vb: Public Class Program
+    content: 'public class PaymentProvider : IPaymentProvider'
+    content.vb: >-
+      Public Class PaymentProvider
+
+          Implements IPaymentProvider
   inheritance:
   - System.Object
+  implements:
+  - TicketModel.IPaymentProvider
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -40,83 +44,56 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Program.Main(System.String[])
-  commentId: M:UnofficialShop.Program.Main(System.String[])
-  id: Main(System.String[])
-  parent: UnofficialShop.Program
+- uid: TicketModel.PaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketModel.PaymentProvider.Pay(System.Decimal,System.String,System.String)
+  id: Pay(System.Decimal,System.String,System.String)
+  parent: TicketModel.PaymentProvider
   langs:
   - csharp
   - vb
-  name: Main(String[])
-  nameWithType: Program.Main(String[])
-  fullName: UnofficialShop.Program.Main(System.String[])
+  name: Pay(Decimal, String, String)
+  nameWithType: PaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketModel.PaymentProvider.Pay(System.Decimal, System.String, System.String)
   type: Method
   source:
-    id: Main
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 14
+    id: Pay
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\PaymentProvider.cs
+    startLine: 16
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
+  summary: "\nSimulate a payment provider\nOne out of 20 payments results in an unknown error\nThree out of 20 payments results in payment rejected\n"
+  example: []
   syntax:
-    content: public static void Main(string[] args)
+    content: public Payment Pay(decimal amountToPay, string valuta, string orderReference)
     parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: UnofficialShop.Program.Main*
-  nameWithType.vb: Program.Main(String())
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.Main(System.String())
-  name.vb: Main(String())
-- uid: UnofficialShop.Program.BuildWebHost(System.String[])
-  commentId: M:UnofficialShop.Program.BuildWebHost(System.String[])
-  id: BuildWebHost(System.String[])
-  parent: UnofficialShop.Program
-  langs:
-  - csharp
-  - vb
-  name: BuildWebHost(String[])
-  nameWithType: Program.BuildWebHost(String[])
-  fullName: UnofficialShop.Program.BuildWebHost(System.String[])
-  type: Method
-  source:
-    id: BuildWebHost
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 19
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public static IWebHost BuildWebHost(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
+    - id: amountToPay
+      type: System.Decimal
+      description: The amount to pay
+    - id: valuta
+      type: System.String
+      description: A three letter code (following ISO 4217) represending the valuta of the amount
+    - id: orderReference
+      type: System.String
+      description: A Guid which is the internal reference of the payment system
     return:
-      type: Microsoft.AspNetCore.Hosting.IWebHost
-    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
-  overload: UnofficialShop.Program.BuildWebHost*
-  nameWithType.vb: Program.BuildWebHost(String())
+      type: TicketModel.Payment
+      description: A payment object, containging the status of the order
+    content.vb: Public Function Pay(amountToPay As Decimal, valuta As String, orderReference As String) As Payment
+  overload: TicketModel.PaymentProvider.Pay*
+  implements:
+  - TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.BuildWebHost(System.String())
-  name.vb: BuildWebHost(String())
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: TicketModel
+  commentId: N:TicketModel
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -124,6 +101,13 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: TicketModel.IPaymentProvider
+  commentId: T:TicketModel.IPaymentProvider
+  parent: TicketModel
+  isExternal: false
+  name: IPaymentProvider
+  nameWithType: IPaymentProvider
+  fullName: TicketModel.IPaymentProvider
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -409,53 +393,101 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Program.Main*
-  commentId: Overload:UnofficialShop.Program.Main
+- uid: TicketModel.PaymentProvider.Pay*
+  commentId: Overload:TicketModel.PaymentProvider.Pay
   isExternal: false
-  name: Main
-  nameWithType: Program.Main
-  fullName: UnofficialShop.Program.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: UnofficialShop.Program.BuildWebHost*
-  commentId: Overload:UnofficialShop.Program.BuildWebHost
-  isExternal: false
-  name: BuildWebHost
-  nameWithType: Program.BuildWebHost
-  fullName: UnofficialShop.Program.BuildWebHost
-- uid: Microsoft.AspNetCore.Hosting.IWebHost
-  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
-  parent: Microsoft.AspNetCore.Hosting
+  name: Pay
+  nameWithType: PaymentProvider.Pay
+  fullName: TicketModel.PaymentProvider.Pay
+- uid: TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  parent: TicketModel.IPaymentProvider
   isExternal: true
-  name: IWebHost
-  nameWithType: IWebHost
-  fullName: Microsoft.AspNetCore.Hosting.IWebHost
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
+  name: Pay(Decimal, String, String)
+  nameWithType: IPaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketModel.IPaymentProvider.Pay(System.Decimal, System.String, System.String)
+  spec.csharp:
+  - uid: TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+    name: Pay
+    nameWithType: IPaymentProvider.Pay
+    fullName: TicketModel.IPaymentProvider.Pay
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+    name: Pay
+    nameWithType: IPaymentProvider.Pay
+    fullName: TicketModel.IPaymentProvider.Pay
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketModel.Payment
+  commentId: T:TicketModel.Payment
+  parent: TicketModel
   isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketModel.Payment

@@ -1,30 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent
-  commentId: T:TicketSystem.DatabaseRepository.Model.TicketEvent
-  id: TicketEvent
-  parent: TicketSystem.DatabaseRepository.Model
+- uid: TicketModel.Customer
+  commentId: T:TicketModel.Customer
+  id: Customer
+  parent: TicketModel
   children:
-  - TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
-  - TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
-  - TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
+  - TicketModel.Customer.Address
+  - TicketModel.Customer.Age
+  - TicketModel.Customer.City
+  - TicketModel.Customer.EMail
+  - TicketModel.Customer.FirstName
+  - TicketModel.Customer.LastName
+  - TicketModel.Customer.Phone
   langs:
   - csharp
   - vb
-  name: TicketEvent
-  nameWithType: TicketEvent
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent
+  name: Customer
+  nameWithType: Customer
+  fullName: TicketModel.Customer
   type: Class
   source:
-    id: TicketEvent
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\TicketEvent.cs
-    startLine: 2
+    id: Customer
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 6
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public class TicketEvent
-    content.vb: Public Class TicketEvent
+    content: public class Customer
+    content.vb: Public Class Customer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -41,93 +45,217 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
-  commentId: P:TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
-  id: TicketEventId
-  parent: TicketSystem.DatabaseRepository.Model.TicketEvent
+- uid: TicketModel.Customer.LastName
+  commentId: P:TicketModel.Customer.LastName
+  id: LastName
+  parent: TicketModel.Customer
   langs:
   - csharp
   - vb
-  name: TicketEventId
-  nameWithType: TicketEvent.TicketEventId
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
+  name: LastName
+  nameWithType: Customer.LastName
+  fullName: TicketModel.Customer.LastName
   type: Property
   source:
-    id: TicketEventId
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\TicketEvent.cs
-    startLine: 4
+    id: LastName
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 8
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public int TicketEventId { get; set; }
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: TicketModel.Customer.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Customer.FirstName
+  commentId: P:TicketModel.Customer.FirstName
+  id: FirstName
+  parent: TicketModel.Customer
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: Customer.FirstName
+  fullName: TicketModel.Customer.FirstName
+  type: Property
+  source:
+    id: FirstName
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 9
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: TicketModel.Customer.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Customer.Age
+  commentId: P:TicketModel.Customer.Age
+  id: Age
+  parent: TicketModel.Customer
+  langs:
+  - csharp
+  - vb
+  name: Age
+  nameWithType: Customer.Age
+  fullName: TicketModel.Customer.Age
+  type: Property
+  source:
+    id: Age
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 10
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public int Age { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Property TicketEventId As Integer
-  overload: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId*
+    content.vb: Public Property Age As Integer
+  overload: TicketModel.Customer.Age*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
-  commentId: P:TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
-  id: EventName
-  parent: TicketSystem.DatabaseRepository.Model.TicketEvent
+- uid: TicketModel.Customer.EMail
+  commentId: P:TicketModel.Customer.EMail
+  id: EMail
+  parent: TicketModel.Customer
   langs:
   - csharp
   - vb
-  name: EventName
-  nameWithType: TicketEvent.EventName
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
+  name: EMail
+  nameWithType: Customer.EMail
+  fullName: TicketModel.Customer.EMail
   type: Property
   source:
-    id: EventName
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\TicketEvent.cs
-    startLine: 5
+    id: EMail
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 11
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public string EventName { get; set; }
+    content: public string EMail { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EventName As String
-  overload: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName*
+    content.vb: Public Property EMail As String
+  overload: TicketModel.Customer.EMail*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
-  commentId: P:TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
-  id: EventHtmlDescription
-  parent: TicketSystem.DatabaseRepository.Model.TicketEvent
+- uid: TicketModel.Customer.Phone
+  commentId: P:TicketModel.Customer.Phone
+  id: Phone
+  parent: TicketModel.Customer
   langs:
   - csharp
   - vb
-  name: EventHtmlDescription
-  nameWithType: TicketEvent.EventHtmlDescription
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
+  name: Phone
+  nameWithType: Customer.Phone
+  fullName: TicketModel.Customer.Phone
   type: Property
   source:
-    id: EventHtmlDescription
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\DatabaseRepository\Model\TicketEvent.cs
-    startLine: 6
+    id: Phone
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 12
   assemblies:
-  - DatabaseRepository
-  namespace: TicketSystem.DatabaseRepository.Model
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public string EventHtmlDescription { get; set; }
+    content: public string Phone { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EventHtmlDescription As String
-  overload: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription*
+    content.vb: Public Property Phone As String
+  overload: TicketModel.Customer.Phone*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Customer.Address
+  commentId: P:TicketModel.Customer.Address
+  id: Address
+  parent: TicketModel.Customer
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: Customer.Address
+  fullName: TicketModel.Customer.Address
+  type: Property
+  source:
+    id: Address
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 13
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public string Address { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Address As String
+  overload: TicketModel.Customer.Address*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Customer.City
+  commentId: P:TicketModel.Customer.City
+  id: City
+  parent: TicketModel.Customer
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: Customer.City
+  fullName: TicketModel.Customer.City
+  type: Property
+  source:
+    id: City
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Customer.cs
+    startLine: 14
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public string City { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: TicketModel.Customer.City*
   modifiers.csharp:
   - public
   - get
@@ -135,12 +263,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TicketSystem.DatabaseRepository.Model
-  commentId: N:TicketSystem.DatabaseRepository.Model
+- uid: TicketModel
+  commentId: N:TicketModel
   isExternal: false
-  name: TicketSystem.DatabaseRepository.Model
-  nameWithType: TicketSystem.DatabaseRepository.Model
-  fullName: TicketSystem.DatabaseRepository.Model
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -433,25 +561,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
+- uid: TicketModel.Customer.LastName*
+  commentId: Overload:TicketModel.Customer.LastName
   isExternal: false
-  name: TicketEventId
-  nameWithType: TicketEvent.TicketEventId
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.TicketEventId
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
-  isExternal: false
-  name: EventName
-  nameWithType: TicketEvent.EventName
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventName
+  name: LastName
+  nameWithType: Customer.LastName
+  fullName: TicketModel.Customer.LastName
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -459,9 +574,46 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription*
-  commentId: Overload:TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
+- uid: TicketModel.Customer.FirstName*
+  commentId: Overload:TicketModel.Customer.FirstName
   isExternal: false
-  name: EventHtmlDescription
-  nameWithType: TicketEvent.EventHtmlDescription
-  fullName: TicketSystem.DatabaseRepository.Model.TicketEvent.EventHtmlDescription
+  name: FirstName
+  nameWithType: Customer.FirstName
+  fullName: TicketModel.Customer.FirstName
+- uid: TicketModel.Customer.Age*
+  commentId: Overload:TicketModel.Customer.Age
+  isExternal: false
+  name: Age
+  nameWithType: Customer.Age
+  fullName: TicketModel.Customer.Age
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketModel.Customer.EMail*
+  commentId: Overload:TicketModel.Customer.EMail
+  isExternal: false
+  name: EMail
+  nameWithType: Customer.EMail
+  fullName: TicketModel.Customer.EMail
+- uid: TicketModel.Customer.Phone*
+  commentId: Overload:TicketModel.Customer.Phone
+  isExternal: false
+  name: Phone
+  nameWithType: Customer.Phone
+  fullName: TicketModel.Customer.Phone
+- uid: TicketModel.Customer.Address*
+  commentId: Overload:TicketModel.Customer.Address
+  isExternal: false
+  name: Address
+  nameWithType: Customer.Address
+  fullName: TicketModel.Customer.Address
+- uid: TicketModel.Customer.City*
+  commentId: Overload:TicketModel.Customer.City
+  isExternal: false
+  name: City
+  nameWithType: Customer.City
+  fullName: TicketModel.Customer.City

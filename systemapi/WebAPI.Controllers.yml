@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: WebAPI.Controllers
+  commentId: N:WebAPI.Controllers
+  id: WebAPI.Controllers
+  children:
+  - WebAPI.Controllers.EventController
+  - WebAPI.Controllers.TicketController
+  - WebAPI.Controllers.VenueController
+  langs:
+  - csharp
+  - vb
+  name: WebAPI.Controllers
+  nameWithType: WebAPI.Controllers
+  fullName: WebAPI.Controllers
+  type: Namespace
+  assemblies:
+  - WebAPI
+references:
+- uid: WebAPI.Controllers.EventController
+  commentId: T:WebAPI.Controllers.EventController
+  isExternal: false
+  name: EventController
+  nameWithType: EventController
+  fullName: WebAPI.Controllers.EventController
+- uid: WebAPI.Controllers.TicketController
+  commentId: T:WebAPI.Controllers.TicketController
+  isExternal: false
+  name: TicketController
+  nameWithType: TicketController
+  fullName: WebAPI.Controllers.TicketController
+- uid: WebAPI.Controllers.VenueController
+  commentId: T:WebAPI.Controllers.VenueController
+  isExternal: false
+  name: VenueController
+  nameWithType: VenueController
+  fullName: WebAPI.Controllers.VenueController

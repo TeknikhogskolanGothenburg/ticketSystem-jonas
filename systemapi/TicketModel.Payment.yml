@@ -1,31 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Startup
-  commentId: T:UnofficialShop.Startup
-  id: Startup
-  parent: UnofficialShop
+- uid: TicketModel.Payment
+  commentId: T:TicketModel.Payment
+  id: Payment
+  parent: TicketModel
   children:
-  - UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  - UnofficialShop.Startup.Configuration
-  - UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  - UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - TicketModel.Payment.OrderReference
+  - TicketModel.Payment.PaymentReference
+  - TicketModel.Payment.PaymentStatus
+  - TicketModel.Payment.TotalAmount
+  - TicketModel.Payment.Valuta
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: UnofficialShop.Startup
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketModel.Payment
   type: Class
   source:
-    id: Startup
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 11
+    id: Payment
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 2
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: public class Payment
+    content.vb: Public Class Payment
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,133 +43,168 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  commentId: M:UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
-  parent: UnofficialShop.Startup
+- uid: TicketModel.Payment.PaymentStatus
+  commentId: P:TicketModel.Payment.PaymentStatus
+  id: PaymentStatus
+  parent: TicketModel.Payment
   langs:
   - csharp
   - vb
-  name: Startup(IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-  fullName: UnofficialShop.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
-  type: Constructor
-  source:
-    id: .ctor
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 13
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public Startup(IConfiguration configuration)
-    parameters:
-    - id: configuration
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public Sub New(configuration As IConfiguration)
-  overload: UnofficialShop.Startup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: UnofficialShop.Startup.Configuration
-  commentId: P:UnofficialShop.Startup.Configuration
-  id: Configuration
-  parent: UnofficialShop.Startup
-  langs:
-  - csharp
-  - vb
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
+  name: PaymentStatus
+  nameWithType: Payment.PaymentStatus
+  fullName: TicketModel.Payment.PaymentStatus
   type: Property
   source:
-    id: Configuration
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 18
+    id: PaymentStatus
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 4
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public IConfiguration Configuration { get; }
+    content: public PaymentStatus PaymentStatus { get; set; }
     parameters: []
     return:
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public ReadOnly Property Configuration As IConfiguration
-  overload: UnofficialShop.Startup.Configuration*
+      type: TicketModel.PaymentStatus
+    content.vb: Public Property PaymentStatus As PaymentStatus
+  overload: TicketModel.Payment.PaymentStatus*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
-- uid: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  commentId: M:UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  parent: UnofficialShop.Startup
+- uid: TicketModel.Payment.TotalAmount
+  commentId: P:TicketModel.Payment.TotalAmount
+  id: TotalAmount
+  parent: TicketModel.Payment
   langs:
   - csharp
   - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  type: Method
+  name: TotalAmount
+  nameWithType: Payment.TotalAmount
+  fullName: TicketModel.Payment.TotalAmount
+  type: Property
   source:
-    id: ConfigureServices
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 21
+    id: TotalAmount
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 5
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public void ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
-  overload: UnofficialShop.Startup.ConfigureServices*
+    content: public decimal TotalAmount { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property TotalAmount As Decimal
+  overload: TicketModel.Payment.TotalAmount*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  commentId: M:UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  parent: UnofficialShop.Startup
+- uid: TicketModel.Payment.Valuta
+  commentId: P:TicketModel.Payment.Valuta
+  id: Valuta
+  parent: TicketModel.Payment
   langs:
   - csharp
   - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
-  fullName: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  type: Method
+  name: Valuta
+  nameWithType: Payment.Valuta
+  fullName: TicketModel.Payment.Valuta
+  type: Property
   source:
-    id: Configure
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 27
+    id: Valuta
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 6
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-    parameters:
-    - id: app
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-    - id: env
-      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
-  overload: UnofficialShop.Startup.Configure*
+    content: public string Valuta { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Valuta As String
+  overload: TicketModel.Payment.Valuta*
   modifiers.csharp:
   - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Payment.PaymentReference
+  commentId: P:TicketModel.Payment.PaymentReference
+  id: PaymentReference
+  parent: TicketModel.Payment
+  langs:
+  - csharp
+  - vb
+  name: PaymentReference
+  nameWithType: Payment.PaymentReference
+  fullName: TicketModel.Payment.PaymentReference
+  type: Property
+  source:
+    id: PaymentReference
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 7
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public string PaymentReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PaymentReference As String
+  overload: TicketModel.Payment.PaymentReference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TicketModel.Payment.OrderReference
+  commentId: P:TicketModel.Payment.OrderReference
+  id: OrderReference
+  parent: TicketModel.Payment
+  langs:
+  - csharp
+  - vb
+  name: OrderReference
+  nameWithType: Payment.OrderReference
+  fullName: TicketModel.Payment.OrderReference
+  type: Property
+  source:
+    id: OrderReference
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\Payment.cs
+    startLine: 8
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public string OrderReference { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OrderReference As String
+  overload: TicketModel.Payment.OrderReference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: TicketModel
+  commentId: N:TicketModel
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -461,79 +497,54 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Startup.#ctor*
-  commentId: Overload:UnofficialShop.Startup.#ctor
+- uid: TicketModel.Payment.PaymentStatus*
+  commentId: Overload:TicketModel.Payment.PaymentStatus
   isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: UnofficialShop.Startup.Startup
-- uid: Microsoft.Extensions.Configuration.IConfiguration
-  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
-  parent: Microsoft.Extensions.Configuration
+  name: PaymentStatus
+  nameWithType: Payment.PaymentStatus
+  fullName: TicketModel.Payment.PaymentStatus
+- uid: TicketModel.PaymentStatus
+  commentId: T:TicketModel.PaymentStatus
+  parent: TicketModel
+  isExternal: false
+  name: PaymentStatus
+  nameWithType: PaymentStatus
+  fullName: TicketModel.PaymentStatus
+- uid: TicketModel.Payment.TotalAmount*
+  commentId: Overload:TicketModel.Payment.TotalAmount
+  isExternal: false
+  name: TotalAmount
+  nameWithType: Payment.TotalAmount
+  fullName: TicketModel.Payment.TotalAmount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
   isExternal: true
-  name: IConfiguration
-  nameWithType: IConfiguration
-  fullName: Microsoft.Extensions.Configuration.IConfiguration
-- uid: Microsoft.Extensions.Configuration
-  commentId: N:Microsoft.Extensions.Configuration
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: TicketModel.Payment.Valuta*
+  commentId: Overload:TicketModel.Payment.Valuta
   isExternal: false
-  name: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-- uid: UnofficialShop.Startup.Configuration*
-  commentId: Overload:UnofficialShop.Startup.Configuration
-  isExternal: false
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
-- uid: UnofficialShop.Startup.ConfigureServices*
-  commentId: Overload:UnofficialShop.Startup.ConfigureServices
-  isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: UnofficialShop.Startup.ConfigureServices
-- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
-  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
-  parent: Microsoft.Extensions.DependencyInjection
+  name: Valuta
+  nameWithType: Payment.Valuta
+  fullName: TicketModel.Payment.Valuta
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: Microsoft.Extensions.DependencyInjection
-  commentId: N:Microsoft.Extensions.DependencyInjection
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketModel.Payment.PaymentReference*
+  commentId: Overload:TicketModel.Payment.PaymentReference
   isExternal: false
-  name: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-- uid: UnofficialShop.Startup.Configure*
-  commentId: Overload:UnofficialShop.Startup.Configure
+  name: PaymentReference
+  nameWithType: Payment.PaymentReference
+  fullName: TicketModel.Payment.PaymentReference
+- uid: TicketModel.Payment.OrderReference*
+  commentId: Overload:TicketModel.Payment.OrderReference
   isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: UnofficialShop.Startup.Configure
-- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
-  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
-  parent: Microsoft.AspNetCore.Builder
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
-- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  parent: Microsoft.AspNetCore.Hosting
-  isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
-  isExternal: false
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
-  isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: OrderReference
+  nameWithType: Payment.OrderReference
+  fullName: TicketModel.Payment.OrderReference

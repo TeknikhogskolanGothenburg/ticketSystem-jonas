@@ -17,21 +17,24 @@ namespace WebAPI.Controllers
         TicketDatabase ticketDB = new TicketDatabase();
 
 
-        // GET: api/Venue
+        /// GET: api/Venue
+        /// Retreives a list of Venues used for displaying all venues in the DB
         [HttpGet]
         public IEnumerable<Venue> Get()
         {
             return ticketDB.VenueGet();
         }
 
-        // GET: api/Venue/5
+        /// GET: api/Venue/5
+        /// Premade controller that selects a specific Venue
         [HttpGet("{id}", Name = "GetVenue")]
         public string Get(int id)
         {
             return "value";
         }
         
-        // POST: api/Venue
+        /// POST: api/Venue
+        /// Posts new venues into the DB
         [HttpPost]
         public void Post([FromBody]Venue venue)
         {

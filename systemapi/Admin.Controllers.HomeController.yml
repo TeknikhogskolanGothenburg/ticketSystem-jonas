@@ -1,29 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Controllers.HomeController
-  commentId: T:UnofficialShop.Controllers.HomeController
+- uid: Admin.Controllers.HomeController
+  commentId: T:Admin.Controllers.HomeController
   id: HomeController
-  parent: UnofficialShop.Controllers
+  parent: Admin.Controllers
   children:
-  - UnofficialShop.Controllers.HomeController.About
-  - UnofficialShop.Controllers.HomeController.Contact
-  - UnofficialShop.Controllers.HomeController.Error
-  - UnofficialShop.Controllers.HomeController.Index
-  - UnofficialShop.Controllers.HomeController.ticketApi
+  - Admin.Controllers.HomeController.Error
+  - Admin.Controllers.HomeController.EventAdd(Admin.Models.EventAddTicketEvent)
+  - Admin.Controllers.HomeController.EventRemove(Admin.Models.EventAddTicketEvent)
+  - Admin.Controllers.HomeController.Events
+  - Admin.Controllers.HomeController.Index
+  - Admin.Controllers.HomeController.Venue
+  - Admin.Controllers.HomeController.VenueAdd(Admin.Models.VenueAddVenue)
   langs:
   - csharp
   - vb
   name: HomeController
   nameWithType: HomeController
-  fullName: UnofficialShop.Controllers.HomeController
+  fullName: Admin.Controllers.HomeController
   type: Class
   source:
     id: HomeController
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 13
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 15
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - Admin
+  namespace: Admin.Controllers
   syntax:
     content: 'public class HomeController : Controller, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable'
     content.vb: >-
@@ -214,154 +216,218 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Controllers.HomeController.ticketApi
-  commentId: F:UnofficialShop.Controllers.HomeController.ticketApi
-  id: ticketApi
-  parent: UnofficialShop.Controllers.HomeController
-  langs:
-  - csharp
-  - vb
-  name: ticketApi
-  nameWithType: HomeController.ticketApi
-  fullName: UnofficialShop.Controllers.HomeController.ticketApi
-  type: Field
-  source:
-    id: ticketApi
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 15
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
-  syntax:
-    content: public static TicketApi ticketApi
-    return:
-      type: TicketSystem.RestApiClient.TicketApi
-    content.vb: Public Shared ticketApi As TicketApi
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: UnofficialShop.Controllers.HomeController.Index
-  commentId: M:UnofficialShop.Controllers.HomeController.Index
+- uid: Admin.Controllers.HomeController.Index
+  commentId: M:Admin.Controllers.HomeController.Index
   id: Index
-  parent: UnofficialShop.Controllers.HomeController
+  parent: Admin.Controllers.HomeController
   langs:
   - csharp
   - vb
   name: Index()
   nameWithType: HomeController.Index()
-  fullName: UnofficialShop.Controllers.HomeController.Index()
+  fullName: Admin.Controllers.HomeController.Index()
   type: Method
   source:
     id: Index
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 21
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 23
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - Admin
+  namespace: Admin.Controllers
   syntax:
     content: public IActionResult Index()
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: Public Function Index As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Index*
+  overload: Admin.Controllers.HomeController.Index*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.About
-  commentId: M:UnofficialShop.Controllers.HomeController.About
-  id: About
-  parent: UnofficialShop.Controllers.HomeController
+- uid: Admin.Controllers.HomeController.Venue
+  commentId: M:Admin.Controllers.HomeController.Venue
+  id: Venue
+  parent: Admin.Controllers.HomeController
   langs:
   - csharp
   - vb
-  name: About()
-  nameWithType: HomeController.About()
-  fullName: UnofficialShop.Controllers.HomeController.About()
+  name: Venue()
+  nameWithType: HomeController.Venue()
+  fullName: Admin.Controllers.HomeController.Venue()
   type: Method
   source:
-    id: About
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 28
+    id: Venue
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 31
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - Admin
+  namespace: Admin.Controllers
   syntax:
-    content: public IActionResult About()
+    content: public IActionResult Venue()
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function About As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.About*
+    content.vb: Public Function Venue As IActionResult
+  overload: Admin.Controllers.HomeController.Venue*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.Contact
-  commentId: M:UnofficialShop.Controllers.HomeController.Contact
-  id: Contact
-  parent: UnofficialShop.Controllers.HomeController
+- uid: Admin.Controllers.HomeController.VenueAdd(Admin.Models.VenueAddVenue)
+  commentId: M:Admin.Controllers.HomeController.VenueAdd(Admin.Models.VenueAddVenue)
+  id: VenueAdd(Admin.Models.VenueAddVenue)
+  parent: Admin.Controllers.HomeController
   langs:
   - csharp
   - vb
-  name: Contact()
-  nameWithType: HomeController.Contact()
-  fullName: UnofficialShop.Controllers.HomeController.Contact()
+  name: VenueAdd(VenueAddVenue)
+  nameWithType: HomeController.VenueAdd(VenueAddVenue)
+  fullName: Admin.Controllers.HomeController.VenueAdd(Admin.Models.VenueAddVenue)
   type: Method
   source:
-    id: Contact
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 34
+    id: VenueAdd
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 37
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - Admin
+  namespace: Admin.Controllers
   syntax:
-    content: public IActionResult Contact()
+    content: public IActionResult VenueAdd(VenueAddVenue venues)
+    parameters:
+    - id: venues
+      type: Admin.Models.VenueAddVenue
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
-    content.vb: Public Function Contact As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Contact*
+    content.vb: Public Function VenueAdd(venues As VenueAddVenue) As IActionResult
+  overload: Admin.Controllers.HomeController.VenueAdd*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Controllers.HomeController.Error
-  commentId: M:UnofficialShop.Controllers.HomeController.Error
+- uid: Admin.Controllers.HomeController.Events
+  commentId: M:Admin.Controllers.HomeController.Events
+  id: Events
+  parent: Admin.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Events()
+  nameWithType: HomeController.Events()
+  fullName: Admin.Controllers.HomeController.Events()
+  type: Method
+  source:
+    id: Events
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 56
+  assemblies:
+  - Admin
+  namespace: Admin.Controllers
+  syntax:
+    content: public IActionResult Events()
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function Events As IActionResult
+  overload: Admin.Controllers.HomeController.Events*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Admin.Controllers.HomeController.EventAdd(Admin.Models.EventAddTicketEvent)
+  commentId: M:Admin.Controllers.HomeController.EventAdd(Admin.Models.EventAddTicketEvent)
+  id: EventAdd(Admin.Models.EventAddTicketEvent)
+  parent: Admin.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: EventAdd(EventAddTicketEvent)
+  nameWithType: HomeController.EventAdd(EventAddTicketEvent)
+  fullName: Admin.Controllers.HomeController.EventAdd(Admin.Models.EventAddTicketEvent)
+  type: Method
+  source:
+    id: EventAdd
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 69
+  assemblies:
+  - Admin
+  namespace: Admin.Controllers
+  syntax:
+    content: public IActionResult EventAdd(EventAddTicketEvent events)
+    parameters:
+    - id: events
+      type: Admin.Models.EventAddTicketEvent
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function EventAdd(events As EventAddTicketEvent) As IActionResult
+  overload: Admin.Controllers.HomeController.EventAdd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Admin.Controllers.HomeController.EventRemove(Admin.Models.EventAddTicketEvent)
+  commentId: M:Admin.Controllers.HomeController.EventRemove(Admin.Models.EventAddTicketEvent)
+  id: EventRemove(Admin.Models.EventAddTicketEvent)
+  parent: Admin.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: EventRemove(EventAddTicketEvent)
+  nameWithType: HomeController.EventRemove(EventAddTicketEvent)
+  fullName: Admin.Controllers.HomeController.EventRemove(Admin.Models.EventAddTicketEvent)
+  type: Method
+  source:
+    id: EventRemove
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 78
+  assemblies:
+  - Admin
+  namespace: Admin.Controllers
+  syntax:
+    content: public IActionResult EventRemove(EventAddTicketEvent events)
+    parameters:
+    - id: events
+      type: Admin.Models.EventAddTicketEvent
+    return:
+      type: Microsoft.AspNetCore.Mvc.IActionResult
+    content.vb: Public Function EventRemove(events As EventAddTicketEvent) As IActionResult
+  overload: Admin.Controllers.HomeController.EventRemove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Admin.Controllers.HomeController.Error
+  commentId: M:Admin.Controllers.HomeController.Error
   id: Error
-  parent: UnofficialShop.Controllers.HomeController
+  parent: Admin.Controllers.HomeController
   langs:
   - csharp
   - vb
   name: Error()
   nameWithType: HomeController.Error()
-  fullName: UnofficialShop.Controllers.HomeController.Error()
+  fullName: Admin.Controllers.HomeController.Error()
   type: Method
   source:
     id: Error
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Controllers\HomeController.cs
-    startLine: 41
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Controllers\HomeController.cs
+    startLine: 89
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop.Controllers
+  - Admin
+  namespace: Admin.Controllers
   syntax:
     content: public IActionResult Error()
     return:
       type: Microsoft.AspNetCore.Mvc.IActionResult
     content.vb: Public Function Error As IActionResult
-  overload: UnofficialShop.Controllers.HomeController.Error*
+  overload: Admin.Controllers.HomeController.Error*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop.Controllers
-  commentId: N:UnofficialShop.Controllers
+- uid: Admin.Controllers
+  commentId: N:Admin.Controllers
   isExternal: false
-  name: UnofficialShop.Controllers
-  nameWithType: UnofficialShop.Controllers
-  fullName: UnofficialShop.Controllers
+  name: Admin.Controllers
+  nameWithType: Admin.Controllers
+  fullName: Admin.Controllers
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -10432,25 +10498,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TicketSystem.RestApiClient.TicketApi
-  commentId: T:TicketSystem.RestApiClient.TicketApi
-  parent: TicketSystem.RestApiClient
-  isExternal: false
-  name: TicketApi
-  nameWithType: TicketApi
-  fullName: TicketSystem.RestApiClient.TicketApi
-- uid: TicketSystem.RestApiClient
-  commentId: N:TicketSystem.RestApiClient
-  isExternal: false
-  name: TicketSystem.RestApiClient
-  nameWithType: TicketSystem.RestApiClient
-  fullName: TicketSystem.RestApiClient
-- uid: UnofficialShop.Controllers.HomeController.Index*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Index
+- uid: Admin.Controllers.HomeController.Index*
+  commentId: Overload:Admin.Controllers.HomeController.Index
   isExternal: false
   name: Index
   nameWithType: HomeController.Index
-  fullName: UnofficialShop.Controllers.HomeController.Index
+  fullName: Admin.Controllers.HomeController.Index
 - uid: Microsoft.AspNetCore.Mvc.IActionResult
   commentId: T:Microsoft.AspNetCore.Mvc.IActionResult
   parent: Microsoft.AspNetCore.Mvc
@@ -10458,21 +10511,59 @@ references:
   name: IActionResult
   nameWithType: IActionResult
   fullName: Microsoft.AspNetCore.Mvc.IActionResult
-- uid: UnofficialShop.Controllers.HomeController.About*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.About
+- uid: Admin.Controllers.HomeController.Venue*
+  commentId: Overload:Admin.Controllers.HomeController.Venue
   isExternal: false
-  name: About
-  nameWithType: HomeController.About
-  fullName: UnofficialShop.Controllers.HomeController.About
-- uid: UnofficialShop.Controllers.HomeController.Contact*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Contact
+  name: Venue
+  nameWithType: HomeController.Venue
+  fullName: Admin.Controllers.HomeController.Venue
+- uid: Admin.Controllers.HomeController.VenueAdd*
+  commentId: Overload:Admin.Controllers.HomeController.VenueAdd
   isExternal: false
-  name: Contact
-  nameWithType: HomeController.Contact
-  fullName: UnofficialShop.Controllers.HomeController.Contact
-- uid: UnofficialShop.Controllers.HomeController.Error*
-  commentId: Overload:UnofficialShop.Controllers.HomeController.Error
+  name: VenueAdd
+  nameWithType: HomeController.VenueAdd
+  fullName: Admin.Controllers.HomeController.VenueAdd
+- uid: Admin.Models.VenueAddVenue
+  commentId: T:Admin.Models.VenueAddVenue
+  parent: Admin.Models
+  isExternal: false
+  name: VenueAddVenue
+  nameWithType: VenueAddVenue
+  fullName: Admin.Models.VenueAddVenue
+- uid: Admin.Models
+  commentId: N:Admin.Models
+  isExternal: false
+  name: Admin.Models
+  nameWithType: Admin.Models
+  fullName: Admin.Models
+- uid: Admin.Controllers.HomeController.Events*
+  commentId: Overload:Admin.Controllers.HomeController.Events
+  isExternal: false
+  name: Events
+  nameWithType: HomeController.Events
+  fullName: Admin.Controllers.HomeController.Events
+- uid: Admin.Controllers.HomeController.EventAdd*
+  commentId: Overload:Admin.Controllers.HomeController.EventAdd
+  isExternal: false
+  name: EventAdd
+  nameWithType: HomeController.EventAdd
+  fullName: Admin.Controllers.HomeController.EventAdd
+- uid: Admin.Models.EventAddTicketEvent
+  commentId: T:Admin.Models.EventAddTicketEvent
+  parent: Admin.Models
+  isExternal: false
+  name: EventAddTicketEvent
+  nameWithType: EventAddTicketEvent
+  fullName: Admin.Models.EventAddTicketEvent
+- uid: Admin.Controllers.HomeController.EventRemove*
+  commentId: Overload:Admin.Controllers.HomeController.EventRemove
+  isExternal: false
+  name: EventRemove
+  nameWithType: HomeController.EventRemove
+  fullName: Admin.Controllers.HomeController.EventRemove
+- uid: Admin.Controllers.HomeController.Error*
+  commentId: Overload:Admin.Controllers.HomeController.Error
   isExternal: false
   name: Error
   nameWithType: HomeController.Error
-  fullName: UnofficialShop.Controllers.HomeController.Error
+  fullName: Admin.Controllers.HomeController.Error

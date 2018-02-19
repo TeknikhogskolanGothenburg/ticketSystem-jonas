@@ -1,31 +1,30 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Startup
-  commentId: T:UnofficialShop.Startup
-  id: Startup
-  parent: UnofficialShop
+- uid: TicketModel.TicketEvent
+  commentId: T:TicketModel.TicketEvent
+  id: TicketEvent
+  parent: TicketModel
   children:
-  - UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  - UnofficialShop.Startup.Configuration
-  - UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  - UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - TicketModel.TicketEvent.EventHtmlDescription
+  - TicketModel.TicketEvent.EventName
+  - TicketModel.TicketEvent.TicketEventId
   langs:
   - csharp
   - vb
-  name: Startup
-  nameWithType: Startup
-  fullName: UnofficialShop.Startup
+  name: TicketEvent
+  nameWithType: TicketEvent
+  fullName: TicketModel.TicketEvent
   type: Class
   source:
-    id: Startup
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 11
+    id: TicketEvent
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\TicketEvent.cs
+    startLine: 5
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public class Startup
-    content.vb: Public Class Startup
+    content: public class TicketEvent
+    content.vb: Public Class TicketEvent
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,133 +41,106 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  commentId: M:UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
-  parent: UnofficialShop.Startup
+- uid: TicketModel.TicketEvent.TicketEventId
+  commentId: P:TicketModel.TicketEvent.TicketEventId
+  id: TicketEventId
+  parent: TicketModel.TicketEvent
   langs:
   - csharp
   - vb
-  name: Startup(IConfiguration)
-  nameWithType: Startup.Startup(IConfiguration)
-  fullName: UnofficialShop.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
-  type: Constructor
-  source:
-    id: .ctor
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 13
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public Startup(IConfiguration configuration)
-    parameters:
-    - id: configuration
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public Sub New(configuration As IConfiguration)
-  overload: UnofficialShop.Startup.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: UnofficialShop.Startup.Configuration
-  commentId: P:UnofficialShop.Startup.Configuration
-  id: Configuration
-  parent: UnofficialShop.Startup
-  langs:
-  - csharp
-  - vb
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
+  name: TicketEventId
+  nameWithType: TicketEvent.TicketEventId
+  fullName: TicketModel.TicketEvent.TicketEventId
   type: Property
   source:
-    id: Configuration
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 18
+    id: TicketEventId
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\TicketEvent.cs
+    startLine: 7
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public IConfiguration Configuration { get; }
+    content: public int TicketEventId { get; set; }
     parameters: []
     return:
-      type: Microsoft.Extensions.Configuration.IConfiguration
-    content.vb: Public ReadOnly Property Configuration As IConfiguration
-  overload: UnofficialShop.Startup.Configuration*
+      type: System.Int32
+    content.vb: Public Property TicketEventId As Integer
+  overload: TicketModel.TicketEvent.TicketEventId*
   modifiers.csharp:
   - public
   - get
+  - set
   modifiers.vb:
   - Public
-  - ReadOnly
-- uid: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  commentId: M:UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  parent: UnofficialShop.Startup
+- uid: TicketModel.TicketEvent.EventName
+  commentId: P:TicketModel.TicketEvent.EventName
+  id: EventName
+  parent: TicketModel.TicketEvent
   langs:
   - csharp
   - vb
-  name: ConfigureServices(IServiceCollection)
-  nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  type: Method
+  name: EventName
+  nameWithType: TicketEvent.EventName
+  fullName: TicketModel.TicketEvent.EventName
+  type: Property
   source:
-    id: ConfigureServices
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 21
+    id: EventName
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\TicketEvent.cs
+    startLine: 8
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public void ConfigureServices(IServiceCollection services)
-    parameters:
-    - id: services
-      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
-    content.vb: Public Sub ConfigureServices(services As IServiceCollection)
-  overload: UnofficialShop.Startup.ConfigureServices*
+    content: public string EventName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventName As String
+  overload: TicketModel.TicketEvent.EventName*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  commentId: M:UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  parent: UnofficialShop.Startup
+- uid: TicketModel.TicketEvent.EventHtmlDescription
+  commentId: P:TicketModel.TicketEvent.EventHtmlDescription
+  id: EventHtmlDescription
+  parent: TicketModel.TicketEvent
   langs:
   - csharp
   - vb
-  name: Configure(IApplicationBuilder, IHostingEnvironment)
-  nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
-  fullName: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  type: Method
+  name: EventHtmlDescription
+  nameWithType: TicketEvent.EventHtmlDescription
+  fullName: TicketModel.TicketEvent.EventHtmlDescription
+  type: Property
   source:
-    id: Configure
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 27
+    id: EventHtmlDescription
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\TicketEvent.cs
+    startLine: 9
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - TicketModel
+  namespace: TicketModel
   syntax:
-    content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-    parameters:
-    - id: app
-      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
-    - id: env
-      type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-    content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
-  overload: UnofficialShop.Startup.Configure*
+    content: public string EventHtmlDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventHtmlDescription As String
+  overload: TicketModel.TicketEvent.EventHtmlDescription*
   modifiers.csharp:
   - public
+  - get
+  - set
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: TicketModel
+  commentId: N:TicketModel
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -461,79 +433,35 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Startup.#ctor*
-  commentId: Overload:UnofficialShop.Startup.#ctor
+- uid: TicketModel.TicketEvent.TicketEventId*
+  commentId: Overload:TicketModel.TicketEvent.TicketEventId
   isExternal: false
-  name: Startup
-  nameWithType: Startup.Startup
-  fullName: UnofficialShop.Startup.Startup
-- uid: Microsoft.Extensions.Configuration.IConfiguration
-  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
-  parent: Microsoft.Extensions.Configuration
+  name: TicketEventId
+  nameWithType: TicketEvent.TicketEventId
+  fullName: TicketModel.TicketEvent.TicketEventId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
-  name: IConfiguration
-  nameWithType: IConfiguration
-  fullName: Microsoft.Extensions.Configuration.IConfiguration
-- uid: Microsoft.Extensions.Configuration
-  commentId: N:Microsoft.Extensions.Configuration
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TicketModel.TicketEvent.EventName*
+  commentId: Overload:TicketModel.TicketEvent.EventName
   isExternal: false
-  name: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-- uid: UnofficialShop.Startup.Configuration*
-  commentId: Overload:UnofficialShop.Startup.Configuration
-  isExternal: false
-  name: Configuration
-  nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
-- uid: UnofficialShop.Startup.ConfigureServices*
-  commentId: Overload:UnofficialShop.Startup.ConfigureServices
-  isExternal: false
-  name: ConfigureServices
-  nameWithType: Startup.ConfigureServices
-  fullName: UnofficialShop.Startup.ConfigureServices
-- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
-  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
-  parent: Microsoft.Extensions.DependencyInjection
+  name: EventName
+  nameWithType: TicketEvent.EventName
+  fullName: TicketModel.TicketEvent.EventName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  name: IServiceCollection
-  nameWithType: IServiceCollection
-  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
-- uid: Microsoft.Extensions.DependencyInjection
-  commentId: N:Microsoft.Extensions.DependencyInjection
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketModel.TicketEvent.EventHtmlDescription*
+  commentId: Overload:TicketModel.TicketEvent.EventHtmlDescription
   isExternal: false
-  name: Microsoft.Extensions.DependencyInjection
-  nameWithType: Microsoft.Extensions.DependencyInjection
-  fullName: Microsoft.Extensions.DependencyInjection
-- uid: UnofficialShop.Startup.Configure*
-  commentId: Overload:UnofficialShop.Startup.Configure
-  isExternal: false
-  name: Configure
-  nameWithType: Startup.Configure
-  fullName: UnofficialShop.Startup.Configure
-- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
-  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
-  parent: Microsoft.AspNetCore.Builder
-  isExternal: true
-  name: IApplicationBuilder
-  nameWithType: IApplicationBuilder
-  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
-- uid: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  commentId: T:Microsoft.AspNetCore.Hosting.IHostingEnvironment
-  parent: Microsoft.AspNetCore.Hosting
-  isExternal: true
-  name: IHostingEnvironment
-  nameWithType: IHostingEnvironment
-  fullName: Microsoft.AspNetCore.Hosting.IHostingEnvironment
-- uid: Microsoft.AspNetCore.Builder
-  commentId: N:Microsoft.AspNetCore.Builder
-  isExternal: false
-  name: Microsoft.AspNetCore.Builder
-  nameWithType: Microsoft.AspNetCore.Builder
-  fullName: Microsoft.AspNetCore.Builder
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
-  isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: EventHtmlDescription
+  nameWithType: TicketEvent.EventHtmlDescription
+  fullName: TicketModel.TicketEvent.EventHtmlDescription

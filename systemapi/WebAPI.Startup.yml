@@ -1,28 +1,28 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Startup
-  commentId: T:UnofficialShop.Startup
+- uid: WebAPI.Startup
+  commentId: T:WebAPI.Startup
   id: Startup
-  parent: UnofficialShop
+  parent: WebAPI
   children:
-  - UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  - UnofficialShop.Startup.Configuration
-  - UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  - UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  - WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  - WebAPI.Startup.Configuration
+  - WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  - WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   langs:
   - csharp
   - vb
   name: Startup
   nameWithType: Startup
-  fullName: UnofficialShop.Startup
+  fullName: WebAPI.Startup
   type: Class
   source:
     id: Startup
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 11
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Startup.cs
+    startLine: 13
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - WebAPI
+  namespace: WebAPI
   syntax:
     content: public class Startup
     content.vb: Public Class Startup
@@ -42,113 +42,113 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
-  commentId: M:UnofficialShop.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+- uid: WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:WebAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)
   id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration)'
-  parent: UnofficialShop.Startup
+  parent: WebAPI.Startup
   langs:
   - csharp
   - vb
   name: Startup(IConfiguration)
   nameWithType: Startup.Startup(IConfiguration)
-  fullName: UnofficialShop.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: WebAPI.Startup.Startup(Microsoft.Extensions.Configuration.IConfiguration)
   type: Constructor
   source:
     id: .ctor
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 13
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Startup.cs
+    startLine: 15
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - WebAPI
+  namespace: WebAPI
   syntax:
     content: public Startup(IConfiguration configuration)
     parameters:
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
     content.vb: Public Sub New(configuration As IConfiguration)
-  overload: UnofficialShop.Startup.#ctor*
+  overload: WebAPI.Startup.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Startup.Configuration
-  commentId: P:UnofficialShop.Startup.Configuration
+- uid: WebAPI.Startup.Configuration
+  commentId: P:WebAPI.Startup.Configuration
   id: Configuration
-  parent: UnofficialShop.Startup
+  parent: WebAPI.Startup
   langs:
   - csharp
   - vb
   name: Configuration
   nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
+  fullName: WebAPI.Startup.Configuration
   type: Property
   source:
     id: Configuration
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 18
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Startup.cs
+    startLine: 20
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - WebAPI
+  namespace: WebAPI
   syntax:
     content: public IConfiguration Configuration { get; }
     parameters: []
     return:
       type: Microsoft.Extensions.Configuration.IConfiguration
     content.vb: Public ReadOnly Property Configuration As IConfiguration
-  overload: UnofficialShop.Startup.Configuration*
+  overload: WebAPI.Startup.Configuration*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  commentId: M:UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  commentId: M:WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   id: ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  parent: UnofficialShop.Startup
+  parent: WebAPI.Startup
   langs:
   - csharp
   - vb
   name: ConfigureServices(IServiceCollection)
   nameWithType: Startup.ConfigureServices(IServiceCollection)
-  fullName: UnofficialShop.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: WebAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   type: Method
   source:
     id: ConfigureServices
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 21
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Startup.cs
+    startLine: 23
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - WebAPI
+  namespace: WebAPI
   syntax:
     content: public void ConfigureServices(IServiceCollection services)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
     content.vb: Public Sub ConfigureServices(services As IServiceCollection)
-  overload: UnofficialShop.Startup.ConfigureServices*
+  overload: WebAPI.Startup.ConfigureServices*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  commentId: M:UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+- uid: WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  commentId: M:WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
   id: Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)
-  parent: UnofficialShop.Startup
+  parent: WebAPI.Startup
   langs:
   - csharp
   - vb
   name: Configure(IApplicationBuilder, IHostingEnvironment)
   nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment)
-  fullName: UnofficialShop.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
+  fullName: WebAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder, Microsoft.AspNetCore.Hosting.IHostingEnvironment)
   type: Method
   source:
     id: Configure
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Startup.cs
-    startLine: 27
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\WebAPI\Startup.cs
+    startLine: 29
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - WebAPI
+  namespace: WebAPI
   syntax:
     content: public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     parameters:
@@ -157,18 +157,18 @@ items:
     - id: env
       type: Microsoft.AspNetCore.Hosting.IHostingEnvironment
     content.vb: Public Sub Configure(app As IApplicationBuilder, env As IHostingEnvironment)
-  overload: UnofficialShop.Startup.Configure*
+  overload: WebAPI.Startup.Configure*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: WebAPI
+  commentId: N:WebAPI
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: WebAPI
+  nameWithType: WebAPI
+  fullName: WebAPI
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -461,12 +461,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Startup.#ctor*
-  commentId: Overload:UnofficialShop.Startup.#ctor
+- uid: WebAPI.Startup.#ctor*
+  commentId: Overload:WebAPI.Startup.#ctor
   isExternal: false
   name: Startup
   nameWithType: Startup.Startup
-  fullName: UnofficialShop.Startup.Startup
+  fullName: WebAPI.Startup.Startup
 - uid: Microsoft.Extensions.Configuration.IConfiguration
   commentId: T:Microsoft.Extensions.Configuration.IConfiguration
   parent: Microsoft.Extensions.Configuration
@@ -480,18 +480,18 @@ references:
   name: Microsoft.Extensions.Configuration
   nameWithType: Microsoft.Extensions.Configuration
   fullName: Microsoft.Extensions.Configuration
-- uid: UnofficialShop.Startup.Configuration*
-  commentId: Overload:UnofficialShop.Startup.Configuration
+- uid: WebAPI.Startup.Configuration*
+  commentId: Overload:WebAPI.Startup.Configuration
   isExternal: false
   name: Configuration
   nameWithType: Startup.Configuration
-  fullName: UnofficialShop.Startup.Configuration
-- uid: UnofficialShop.Startup.ConfigureServices*
-  commentId: Overload:UnofficialShop.Startup.ConfigureServices
+  fullName: WebAPI.Startup.Configuration
+- uid: WebAPI.Startup.ConfigureServices*
+  commentId: Overload:WebAPI.Startup.ConfigureServices
   isExternal: false
   name: ConfigureServices
   nameWithType: Startup.ConfigureServices
-  fullName: UnofficialShop.Startup.ConfigureServices
+  fullName: WebAPI.Startup.ConfigureServices
 - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
   commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
   parent: Microsoft.Extensions.DependencyInjection
@@ -505,12 +505,12 @@ references:
   name: Microsoft.Extensions.DependencyInjection
   nameWithType: Microsoft.Extensions.DependencyInjection
   fullName: Microsoft.Extensions.DependencyInjection
-- uid: UnofficialShop.Startup.Configure*
-  commentId: Overload:UnofficialShop.Startup.Configure
+- uid: WebAPI.Startup.Configure*
+  commentId: Overload:WebAPI.Startup.Configure
   isExternal: false
   name: Configure
   nameWithType: Startup.Configure
-  fullName: UnofficialShop.Startup.Configure
+  fullName: WebAPI.Startup.Configure
 - uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
   commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
   parent: Microsoft.AspNetCore.Builder

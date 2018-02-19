@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: UnofficialShop.Program
-  commentId: T:UnofficialShop.Program
-  id: Program
-  parent: UnofficialShop
+- uid: Admin.Models.EventAddTicketEvent
+  commentId: T:Admin.Models.EventAddTicketEvent
+  id: EventAddTicketEvent
+  parent: Admin.Models
   children:
-  - UnofficialShop.Program.BuildWebHost(System.String[])
-  - UnofficialShop.Program.Main(System.String[])
+  - Admin.Models.EventAddTicketEvent.ExistingEvents
+  - Admin.Models.EventAddTicketEvent.NewEvent
   langs:
   - csharp
   - vb
-  name: Program
-  nameWithType: Program
-  fullName: UnofficialShop.Program
+  name: EventAddTicketEvent
+  nameWithType: EventAddTicketEvent
+  fullName: Admin.Models.EventAddTicketEvent
   type: Class
   source:
-    id: Program
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 12
+    id: EventAddTicketEvent
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 13
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - Admin
+  namespace: Admin.Models
   syntax:
-    content: public class Program
-    content.vb: Public Class Program
+    content: public class EventAddTicketEvent
+    content.vb: Public Class EventAddTicketEvent
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,83 +40,75 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: UnofficialShop.Program.Main(System.String[])
-  commentId: M:UnofficialShop.Program.Main(System.String[])
-  id: Main(System.String[])
-  parent: UnofficialShop.Program
+- uid: Admin.Models.EventAddTicketEvent.NewEvent
+  commentId: P:Admin.Models.EventAddTicketEvent.NewEvent
+  id: NewEvent
+  parent: Admin.Models.EventAddTicketEvent
   langs:
   - csharp
   - vb
-  name: Main(String[])
-  nameWithType: Program.Main(String[])
-  fullName: UnofficialShop.Program.Main(System.String[])
-  type: Method
+  name: NewEvent
+  nameWithType: EventAddTicketEvent.NewEvent
+  fullName: Admin.Models.EventAddTicketEvent.NewEvent
+  type: Property
   source:
-    id: Main
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 14
+    id: NewEvent
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 15
   assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
+  - Admin
+  namespace: Admin.Models
   syntax:
-    content: public static void Main(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
-    content.vb: Public Shared Sub Main(args As String())
-  overload: UnofficialShop.Program.Main*
-  nameWithType.vb: Program.Main(String())
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.Main(System.String())
-  name.vb: Main(String())
-- uid: UnofficialShop.Program.BuildWebHost(System.String[])
-  commentId: M:UnofficialShop.Program.BuildWebHost(System.String[])
-  id: BuildWebHost(System.String[])
-  parent: UnofficialShop.Program
-  langs:
-  - csharp
-  - vb
-  name: BuildWebHost(String[])
-  nameWithType: Program.BuildWebHost(String[])
-  fullName: UnofficialShop.Program.BuildWebHost(System.String[])
-  type: Method
-  source:
-    id: BuildWebHost
-    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\UnofficialShop\Program.cs
-    startLine: 19
-  assemblies:
-  - UnofficialShop
-  namespace: UnofficialShop
-  syntax:
-    content: public static IWebHost BuildWebHost(string[] args)
-    parameters:
-    - id: args
-      type: System.String[]
+    content: public TicketEvent NewEvent { get; set; }
+    parameters: []
     return:
-      type: Microsoft.AspNetCore.Hosting.IWebHost
-    content.vb: Public Shared Function BuildWebHost(args As String()) As IWebHost
-  overload: UnofficialShop.Program.BuildWebHost*
-  nameWithType.vb: Program.BuildWebHost(String())
+      type: TicketModel.TicketEvent
+    content.vb: Public Property NewEvent As TicketEvent
+  overload: Admin.Models.EventAddTicketEvent.NewEvent*
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: UnofficialShop.Program.BuildWebHost(System.String())
-  name.vb: BuildWebHost(String())
+- uid: Admin.Models.EventAddTicketEvent.ExistingEvents
+  commentId: P:Admin.Models.EventAddTicketEvent.ExistingEvents
+  id: ExistingEvents
+  parent: Admin.Models.EventAddTicketEvent
+  langs:
+  - csharp
+  - vb
+  name: ExistingEvents
+  nameWithType: EventAddTicketEvent.ExistingEvents
+  fullName: Admin.Models.EventAddTicketEvent.ExistingEvents
+  type: Property
+  source:
+    id: ExistingEvents
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\Admin\Models\VenueAddVenue.cs
+    startLine: 16
+  assemblies:
+  - Admin
+  namespace: Admin.Models
+  syntax:
+    content: public List<TicketEvent> ExistingEvents { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TicketModel.TicketEvent}
+    content.vb: Public Property ExistingEvents As List(Of TicketEvent)
+  overload: Admin.Models.EventAddTicketEvent.ExistingEvents*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: UnofficialShop
-  commentId: N:UnofficialShop
+- uid: Admin.Models
+  commentId: N:Admin.Models
   isExternal: false
-  name: UnofficialShop
-  nameWithType: UnofficialShop
-  fullName: UnofficialShop
+  name: Admin.Models
+  nameWithType: Admin.Models
+  fullName: Admin.Models
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -409,53 +401,115 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: UnofficialShop.Program.Main*
-  commentId: Overload:UnofficialShop.Program.Main
+- uid: Admin.Models.EventAddTicketEvent.NewEvent*
+  commentId: Overload:Admin.Models.EventAddTicketEvent.NewEvent
   isExternal: false
-  name: Main
-  nameWithType: Program.Main
-  fullName: UnofficialShop.Program.Main
-- uid: System.String[]
-  name: String[]
-  nameWithType: String[]
-  fullName: System.String[]
-  nameWithType.vb: String()
-  fullName.vb: System.String()
-  name.vb: String()
+  name: NewEvent
+  nameWithType: EventAddTicketEvent.NewEvent
+  fullName: Admin.Models.EventAddTicketEvent.NewEvent
+- uid: TicketModel.TicketEvent
+  commentId: T:TicketModel.TicketEvent
+  parent: TicketModel
+  isExternal: false
+  name: TicketEvent
+  nameWithType: TicketEvent
+  fullName: TicketModel.TicketEvent
+- uid: TicketModel
+  commentId: N:TicketModel
+  isExternal: false
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
+- uid: Admin.Models.EventAddTicketEvent.ExistingEvents*
+  commentId: Overload:Admin.Models.EventAddTicketEvent.ExistingEvents
+  isExternal: false
+  name: ExistingEvents
+  nameWithType: EventAddTicketEvent.ExistingEvents
+  fullName: Admin.Models.EventAddTicketEvent.ExistingEvents
+- uid: System.Collections.Generic.List{TicketModel.TicketEvent}
+  commentId: T:System.Collections.Generic.List{TicketModel.TicketEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<TicketEvent>
+  nameWithType: List<TicketEvent>
+  fullName: System.Collections.Generic.List<TicketModel.TicketEvent>
+  nameWithType.vb: List(Of TicketEvent)
+  fullName.vb: System.Collections.Generic.List(Of TicketModel.TicketEvent)
+  name.vb: List(Of TicketEvent)
   spec.csharp:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   spec.vb:
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
     isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: UnofficialShop.Program.BuildWebHost*
-  commentId: Overload:UnofficialShop.Program.BuildWebHost
-  isExternal: false
-  name: BuildWebHost
-  nameWithType: Program.BuildWebHost
-  fullName: UnofficialShop.Program.BuildWebHost
-- uid: Microsoft.AspNetCore.Hosting.IWebHost
-  commentId: T:Microsoft.AspNetCore.Hosting.IWebHost
-  parent: Microsoft.AspNetCore.Hosting
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+    nameWithType: TicketEvent
+    fullName: TicketModel.TicketEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: IWebHost
-  nameWithType: IWebHost
-  fullName: Microsoft.AspNetCore.Hosting.IWebHost
-- uid: Microsoft.AspNetCore.Hosting
-  commentId: N:Microsoft.AspNetCore.Hosting
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
   isExternal: false
-  name: Microsoft.AspNetCore.Hosting
-  nameWithType: Microsoft.AspNetCore.Hosting
-  fullName: Microsoft.AspNetCore.Hosting
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

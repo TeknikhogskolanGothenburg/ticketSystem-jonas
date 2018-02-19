@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: TicketModel.IPaymentProvider
+  commentId: T:TicketModel.IPaymentProvider
+  id: IPaymentProvider
+  parent: TicketModel
+  children:
+  - TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IPaymentProvider
+  nameWithType: IPaymentProvider
+  fullName: TicketModel.IPaymentProvider
+  type: Interface
+  source:
+    id: IPaymentProvider
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\IPaymentProvider.cs
+    startLine: 2
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  syntax:
+    content: public interface IPaymentProvider
+    content.vb: Public Interface IPaymentProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  commentId: M:TicketModel.IPaymentProvider.Pay(System.Decimal,System.String,System.String)
+  id: Pay(System.Decimal,System.String,System.String)
+  parent: TicketModel.IPaymentProvider
+  langs:
+  - csharp
+  - vb
+  name: Pay(Decimal, String, String)
+  nameWithType: IPaymentProvider.Pay(Decimal, String, String)
+  fullName: TicketModel.IPaymentProvider.Pay(System.Decimal, System.String, System.String)
+  type: Method
+  source:
+    id: Pay
+    path: C:\Users\Jakob\Documents\GitHub\ticketSystem-jonas\src\TicketModel\IPaymentProvider.cs
+    startLine: 11
+  assemblies:
+  - TicketModel
+  namespace: TicketModel
+  summary: "\nPay an amount\n"
+  example: []
+  syntax:
+    content: Payment Pay(decimal amountToPay, string valuta, string orderReference)
+    parameters:
+    - id: amountToPay
+      type: System.Decimal
+      description: The amount to pay
+    - id: valuta
+      type: System.String
+      description: A three letter code (following ISO 4217) represending the valuta of the amount
+    - id: orderReference
+      type: System.String
+      description: A string representing the order
+    return:
+      type: TicketModel.Payment
+      description: A payment object, containging the status of the order
+    content.vb: Function Pay(amountToPay As Decimal, valuta As String, orderReference As String) As Payment
+  overload: TicketModel.IPaymentProvider.Pay*
+references:
+- uid: TicketModel
+  commentId: N:TicketModel
+  isExternal: false
+  name: TicketModel
+  nameWithType: TicketModel
+  fullName: TicketModel
+- uid: TicketModel.IPaymentProvider.Pay*
+  commentId: Overload:TicketModel.IPaymentProvider.Pay
+  isExternal: false
+  name: Pay
+  nameWithType: IPaymentProvider.Pay
+  fullName: TicketModel.IPaymentProvider.Pay
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TicketModel.Payment
+  commentId: T:TicketModel.Payment
+  parent: TicketModel
+  isExternal: false
+  name: Payment
+  nameWithType: Payment
+  fullName: TicketModel.Payment
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Admin.Controllers
+  commentId: N:Admin.Controllers
+  id: Admin.Controllers
+  children:
+  - Admin.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Admin.Controllers
+  nameWithType: Admin.Controllers
+  fullName: Admin.Controllers
+  type: Namespace
+  assemblies:
+  - Admin
+references:
+- uid: Admin.Controllers.HomeController
+  commentId: T:Admin.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Admin.Controllers.HomeController

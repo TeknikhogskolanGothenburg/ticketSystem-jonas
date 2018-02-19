@@ -5,6 +5,7 @@ items:
   id: UnofficialShop.Models
   children:
   - UnofficialShop.Models.ErrorViewModel
+  - UnofficialShop.Models.Model
   langs:
   - csharp
   - vb
@@ -21,3 +22,9 @@ references:
   name: ErrorViewModel
   nameWithType: ErrorViewModel
   fullName: UnofficialShop.Models.ErrorViewModel
+- uid: UnofficialShop.Models.Model
+  commentId: T:UnofficialShop.Models.Model
+  isExternal: false
+  name: Model
+  nameWithType: Model
+  fullName: UnofficialShop.Models.Model

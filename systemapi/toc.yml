@@ -1,4 +1,44 @@
 ### YamlMime:TableOfContent
+- uid: Admin
+  name: Admin
+  items:
+  - uid: Admin.Program
+    name: Program
+  - uid: Admin.Startup
+    name: Startup
+- uid: Admin.Controllers
+  name: Admin.Controllers
+  items:
+  - uid: Admin.Controllers.HomeController
+    name: HomeController
+- uid: Admin.Models
+  name: Admin.Models
+  items:
+  - uid: Admin.Models.ErrorViewModel
+    name: ErrorViewModel
+  - uid: Admin.Models.EventAddTicketEvent
+    name: EventAddTicketEvent
+  - uid: Admin.Models.VenueAddVenue
+    name: VenueAddVenue
+- uid: TicketModel
+  name: TicketModel
+  items:
+  - uid: TicketModel.Customer
+    name: Customer
+  - uid: TicketModel.IPaymentProvider
+    name: IPaymentProvider
+  - uid: TicketModel.Payment
+    name: Payment
+  - uid: TicketModel.PaymentProvider
+    name: PaymentProvider
+  - uid: TicketModel.PaymentStatus
+    name: PaymentStatus
+  - uid: TicketModel.TicketEvent
+    name: TicketEvent
+  - uid: TicketModel.TicketEventDate
+    name: TicketEventDate
+  - uid: TicketModel.Venue
+    name: Venue
 - uid: TicketSystem.DatabaseRepository
   name: TicketSystem.DatabaseRepository
   items:
@@ -6,17 +46,6 @@
     name: ITicketDatabase
   - uid: TicketSystem.DatabaseRepository.TicketDatabase
     name: TicketDatabase
-- uid: TicketSystem.DatabaseRepository.Model
-  name: TicketSystem.DatabaseRepository.Model
-  items:
-  - uid: TicketSystem.DatabaseRepository.Model.Customer
-    name: Customer
-  - uid: TicketSystem.DatabaseRepository.Model.TicketEvent
-    name: TicketEvent
-  - uid: TicketSystem.DatabaseRepository.Model.TicketEventDate
-    name: TicketEventDate
-  - uid: TicketSystem.DatabaseRepository.Model.Venue
-    name: Venue
 - uid: TicketSystem.PaymentProvider
   name: TicketSystem.PaymentProvider
   items:
@@ -57,3 +86,21 @@
   items:
   - uid: UnofficialShop.Models.ErrorViewModel
     name: ErrorViewModel
+  - uid: UnofficialShop.Models.Model
+    name: Model
+- uid: WebAPI
+  name: WebAPI
+  items:
+  - uid: WebAPI.Program
+    name: Program
+  - uid: WebAPI.Startup
+    name: Startup
+- uid: WebAPI.Controllers
+  name: WebAPI.Controllers
+  items:
+  - uid: WebAPI.Controllers.EventController
+    name: EventController
+  - uid: WebAPI.Controllers.TicketController
+    name: TicketController
+  - uid: WebAPI.Controllers.VenueController
+    name: VenueController

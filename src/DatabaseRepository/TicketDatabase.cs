@@ -13,7 +13,7 @@ namespace TicketSystem.DatabaseRepository
         static string connectionString = @"Server=(localdb)\MSSQLLocalDB;Database=TicketSystem;Trusted_Connection=True";
         //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
 
-        //Backoffice adding event
+        ///Backoffice adding event
         public TicketEvent EventAdd(string name, string description)
         {
             
@@ -26,7 +26,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
          
-        //Backoffice removing event
+        ///Backoffice removing event
         public void EventRemove(int ID)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -35,7 +35,7 @@ namespace TicketSystem.DatabaseRepository
                 connection.Query("DELETE FROM TicketEvents  WHERE ID =" + "'" + ID + "'");
             }
         }
-        //Backoffice Adding venue
+        ///Backoffice Adding venue
         public Venue VenueAdd(Venue venue)
         {
             
@@ -47,7 +47,7 @@ namespace TicketSystem.DatabaseRepository
                 return connection.Query<Venue>("SELECT * FROM Venues WHERE VenueID=@Id", new { Id = addedVenueQuery }).First();
             }
         }
-        //Backoffice removing venue
+        ///Backoffice removing venue
         public void VenueRemove(int Id)
         {
            
@@ -59,7 +59,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Backoffice only listing venues to allow easier deletion.
+        ///Backoffice only listing venues to allow easier deletion.
         public List<Venue> VenuesFind(string query)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -69,7 +69,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Ticketshop choose an item through the list
+        ///Ticketshop choose an item through the list
         public List<TicketEvent> EventSelect(int Id)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -79,7 +79,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Getall Events list
+        ///Getall Events list
         public List<TicketEvent> EventGet()
         {
             using (var connection = new SqlConnection(connectionString))
@@ -89,7 +89,7 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        //Getall Venues list
+        ///Getall Venues list
         public List<Venue> VenueGet()
         {
             using (var connection = new SqlConnection(connectionString))
