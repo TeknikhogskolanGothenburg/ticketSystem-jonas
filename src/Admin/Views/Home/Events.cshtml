@@ -1,6 +1,4 @@
-﻿
-
-@model Admin.Models.EventAddTicketEvent
+﻿@model Admin.Models.EventAddTicketEvent
 
 
 @{
@@ -23,14 +21,17 @@
 }
 
 <h3>List of Events</h3>
-@if (Model.ExistingEvents != null)
+@using (Html.BeginForm("EventRemove", "Home", FormMethod.Post))
 {
-
-    <select>
-    @foreach (var x in Model.ExistingEvents)
+    @if (Model.ExistingEvents != null)
     {
-        <option value="@x.TicketEventId">@x.EventName</option>
+        <select id="Events" name="EventSelected">
+            @foreach (var x in Model.ExistingEvents)
+            {
+                <option value="@x.TicketEventId">@x.EventName</option>
+            }
+        </select>
+
     }
-    </select>
-     <input id="Id" type="button" value="Delete" onclick="@Html.ActionLink("EventRemove","Home")"  />
+        <input type="submit" value="Remove Event" />
 }

@@ -30,10 +30,12 @@ namespace WebAPI.Controllers
             return "value";
         }
 
-        // POST api/values
+        /// POST: api/Events
+        /// Posts new event into the DB
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]TicketEvent ticketEvent)
         {
+            ticketDB.EventAdd(ticketEvent);
         }
 
         // PUT api/values/5
@@ -46,7 +48,7 @@ namespace WebAPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-
+            ticketDB.EventRemove(id);
         }
     }
 }

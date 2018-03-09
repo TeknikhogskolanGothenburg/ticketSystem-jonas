@@ -20,23 +20,19 @@
     <input type="submit" value="Add" />
 }
 
-
-    <h3>List of Venues</h3>
-<form>  
+<h3>List of Venues</h3>
+@using (Html.BeginForm("VenueRemove", "Home", FormMethod.Post))
+    {
     @if (Model.ExistingVenues != null)
         {
-            @using (Html.BeginForm("VenueRemove", "Home", FormMethod.Post))
-               
-            {
-                <select id="Venue" name="Venue" >
+            <select id="Venue" name="VenueSelected">
                 @foreach (var x in Model.ExistingVenues)
-                    {
-                        <option value="@x.VenueId">@x.VenueName</option>
-                    }
-                </select>
-                
-            }
-    
+                {
+                    <option value="@x.VenueId">@x.VenueName</option>
+                }
+            </select>
+
+        }
+
+    <input type="submit" value="Remove Venue" /> @*Not yet managed to link this to the HomeController method VenueRemove*@
     }
-    <input type ="submit" value="Remove Venue" /> @*Not yet managed to link this to the HomeController method VenueRemove*@
-</form>

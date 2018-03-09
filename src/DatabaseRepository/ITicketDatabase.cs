@@ -12,7 +12,7 @@ namespace TicketSystem.DatabaseRepository
         /// <param name="name">Name of the event</param>
         /// <param name="description">A desription of the event, html markup of the event is allowed</param>
         /// <returns>An object representing the newly created TicketEvent</returns>
-        TicketEvent EventAdd(string name, string description);
+        TicketEvent EventAdd(TicketEvent ticketEvent);
 
         /// <summary>
         /// Add a new venue to the database

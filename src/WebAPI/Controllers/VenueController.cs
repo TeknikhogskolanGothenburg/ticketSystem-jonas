@@ -48,11 +48,15 @@ namespace WebAPI.Controllers
 
         }
         
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(string id)
-        {
 
+        /// <summary>
+        /// DELETE: api/Venue
+        /// </summary>
+        /// <param name="id"></param>
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            ticketDB.VenueRemove(id);
         }
 
     }

@@ -14,13 +14,13 @@ namespace TicketSystem.DatabaseRepository
         //string connectionString = ConfigurationManager.ConnectionStrings["TicketSystem"].ConnectionString;
 
         ///Backoffice adding event
-        public TicketEvent EventAdd(string name, string description)
+        public TicketEvent EventAdd(TicketEvent ticketEvent)
         {
             
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("insert into TicketEvents(EventName, EventHtmlDescription) values(@Name, @Description)", new { Name = name, Description = description });
+                connection.Query("insert into TicketEvents(EventName, EventHtmlDescription) values(@Name, @Description)", new { Name = ticketEvent.EventName, description = ticketEvent.EventHtmlDescription });
                 var addedEventQuery = connection.Query<int>("SELECT IDENT_CURRENT ('TicketEvents') AS Current_Identity").First();
                 return connection.Query<TicketEvent>("SELECT * FROM TicketEvents WHERE TicketEventID=@Id", new { Id = addedEventQuery }).First();
             }
@@ -32,7 +32,7 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("DELETE FROM TicketEvents  WHERE ID =" + "'" + ID + "'");
+                connection.Query("DELETE FROM TicketEvents  WHERE TicketEventID ='"+ID+"'");
             }
         }
         ///Backoffice Adding venue
@@ -54,7 +54,7 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Query("DELETE FROM Venues  WHERE VenueID =" + "'" + Id +"'");
+                connection.Query("DELETE FROM Venues  WHERE VenueID =' "+ Id +"'");
               
             }
         }
@@ -69,15 +69,15 @@ namespace TicketSystem.DatabaseRepository
             }
         }
 
-        ///Ticketshop choose an item through the list
-        public List<TicketEvent> EventSelect(int Id)
-        {
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                return connection.Query<TicketEvent>("SELECT * FROM Venues WHERE VenueID = '" + Id + "'") .ToList();
-            }
-        }
+        ///Backoffice display info for event
+        //public EventInfo(int Id)
+        //{
+        //    using (var connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        return connection.Query("SELECT * FROM Venues WHERE VenueID = '" + Id + "'") .ToList();
+        //    }
+        //}
 
         ///Getall Events list
         public List<TicketEvent> EventGet()
@@ -85,7 +85,7 @@ namespace TicketSystem.DatabaseRepository
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                return connection.Query<TicketEvent>("SELECT EventName FROM TicketEvent ").ToList();
+                return connection.Query<TicketEvent>("SELECT * FROM TicketEvents ").ToList();
             }
         }
 

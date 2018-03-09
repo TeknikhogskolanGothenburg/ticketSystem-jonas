@@ -20,11 +20,13 @@ namespace Admin.Controllers
         private TicketApi ticketApi = new TicketApi();
         private VenueAddVenue adminVenue = new VenueAddVenue();
 
-        //Index
+        //Index Loads the lists if there are any.
         public IActionResult Index()
         {
             List<Venue> venues = new List<Venue> { };
             venues = ticketApi.VenueGet();
+            List<TicketEvent> events = new List<TicketEvent> { };
+            events = ticketApi.EventGet();
             return View();
         }
 
@@ -44,13 +46,14 @@ namespace Admin.Controllers
 
         }
 
-        //Did not manage to finish this method in time.
-        //public IActionResult VenueRemove()
-        //{
-        //    VenueAddVenue venues = Request.Form["Venue"];
-        //    ticketApi.VenueRemove(venues.NewVenue);
-        //    return RedirectToAction("Venue");
-        //}
+        //Retreives the selected Venue as a string and parses it to int.
+        public IActionResult VenueRemove(string VenueSelected)
+        {
+            string ID = Request.Form["VenueSelected"];
+            
+            ticketApi.VenueRemove(int.Parse(ID));
+            return RedirectToAction("Venue");
+        }
 
 
         //All actions relating to Events
@@ -58,28 +61,39 @@ namespace Admin.Controllers
         {
 
             adminEvent.ExistingEvents = ticketApi.EventGet();
-            if (ticketApi.EventGet() != null)
+            
             {
                 return View(adminEvent);
             }
-            else adminEvent.ExistingEvents = new List<TicketEvent>();
-            return View(adminEvent);
+         
 
         }
+
+
+        public IActionResult EventDescription(EventAddTicketEvent events)
+        {
+
+
+            ticketApi.TicketEventGet(events.NewEvent);
+            return RedirectToAction("Events");
+
+        }
+
 
         public IActionResult EventAdd(EventAddTicketEvent events)
         {
 
 
             ticketApi.EventAdd(events.NewEvent);
-            return RedirectToAction("Venue");
+            return RedirectToAction("Events");
 
         }
 
-        public IActionResult EventRemove(EventAddTicketEvent events)
+        public IActionResult EventRemove()
         {
-            ticketApi.EventRemove(events.NewEvent);
-            return RedirectToAction("Venue");
+            string Id = Request.Form["EventSelected"];
+            ticketApi.EventRemove(int.Parse(Id));
+            return RedirectToAction("Events");
         }
 
 

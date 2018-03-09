@@ -17,7 +17,7 @@ namespace TicketSystem.RestApiClient
         public List<TicketEvent> EventGet()
         {
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("events", Method.GET);
+            var request = new RestRequest("Event", Method.GET);
             var response = client.Execute<List<TicketEvent>>(request);
             return response.Data;
         }
@@ -25,7 +25,7 @@ namespace TicketSystem.RestApiClient
         public Ticket TicketTicketIdGet(int ticketId)
         {
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("ticket/{id}", Method.GET);
+            var request = new RestRequest("Ticket/{id}", Method.GET);
             request.AddUrlSegment("id", ticketId);
             var response = client.Execute<Ticket>(request);
 
@@ -38,16 +38,18 @@ namespace TicketSystem.RestApiClient
         }
 
 
-        public Ticket TicketEventGet(int Id)
+        public Ticket TicketEventGet(TicketEvent ticketEvent)
         {
+            var output = JsonConvert.SerializeObject(ticketEvent);
+
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Events/{id}", Method.GET);
-            request.AddUrlSegment("id", Id);
+            var request = new RestRequest("Event/{id}", Method.GET);
+            request.AddParameter("application/json", output, ParameterType.RequestBody);
             var response = client.Execute<Ticket>(request);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                throw new KeyNotFoundException(string.Format("Event not found", Id));
+                throw new KeyNotFoundException(string.Format("Event not found", ticketEvent));
             }
             return response.Data;
         }
@@ -58,19 +60,19 @@ namespace TicketSystem.RestApiClient
             var output = JsonConvert.SerializeObject(ticketEvent);
 
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Events", Method.POST);
+            var request = new RestRequest("Event", Method.POST);
             request.AddParameter("application/json", output, ParameterType.RequestBody);
             var response = client.Execute<TicketEvent>(request);
 
         }
-        public void EventRemove(TicketEvent events)
+        public void EventRemove(int ID)
         {
-            var output = JsonConvert.SerializeObject(events);
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Events", Method.DELETE);
-            request.AddParameter("application/json", output, ParameterType.RequestBody);
-            var response = client.Execute<Venue>(request);
+            var request = new RestRequest("Event/{id}", Method.DELETE);
+            request.AddUrlSegment("id", ID);
+            var response = client.Execute(request);
         }
+    
 
 
 
@@ -95,15 +97,14 @@ namespace TicketSystem.RestApiClient
             request.AddParameter("application/json", output, ParameterType.RequestBody);
             var response = client.Execute<Venue>(request);
         }
-        public void VenueRemove(Venue venue)
+
+
+        public void VenueRemove(int ID)
         {
-            var output = JsonConvert.SerializeObject(venue);
             var client = new RestClient(connectionStringAPI);
-            var request = new RestRequest("Venues", Method.DELETE);
-            request.AddParameter("application/json", output, ParameterType.RequestBody);
-            var response = client.Execute<Venue>(request);
+            var request = new RestRequest("Venue/{id}", Method.DELETE);
+            request.AddUrlSegment("id", ID);
+            var response = client.Execute(request);
         }
-
-
     }
 }
